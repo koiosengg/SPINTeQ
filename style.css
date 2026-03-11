@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  position: relative;
+  background: #010101;
+}
+
+/* Animations */
+
+.frame1 {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 160px;
+  background: #010101;
+  position: relative;
+  animation: frame1 1s linear forwards;
+  animation-delay: 11s;
+}
+
+@keyframes frame1 {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    display: flex;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.frame1-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  animation: frame1Container 5s linear forwards; /* make it to 1s for opacity 1 to 0 */
+  /* animation-delay: 4s; */
+}
+
+@keyframes frame1Container {
+  from {
+    display: flex;
+  }
+  to {
+    display: none;
+  }
+}
+
+/* @keyframes frame1Container {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+} */
+
+.frame1-container-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.frame1-container-heading p {
+  color: #010101;
+  font-family: Inter;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  animation: frame1ContainerHeadingP 1s linear forwards;
+  transition: all 0.3s;
+}
+
+@keyframes frame1ContainerHeadingP {
+  0% {
+    color: #010101;
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.frame1-container-heading span {
+  color: #010101;
+  font-family: Inter;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  animation: frame1ContainerHeadingP 1s linear forwards;
+  animation-delay: 1s;
+  transition: all 0.3s;
+}
+
+@keyframes frame1ContainerHeadingSpan {
+  0% {
+    color: #010101;
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.frame1-container-heading h1 {
+  color: #010101;
+  font-family: Inter;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  animation: frame1ContainerHeadingH1 1s linear forwards;
+  animation-delay: 2s;
+  transition: all 0.3s;
+}
+
+@keyframes frame1ContainerHeadingH1 {
+  0% {
+    color: #010101;
+  }
+  100% {
+    color: #eaeaea;
+  }
+}
+
+.frame1-container-para {
+  color: #010101;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  animation: frame1ContainerPara 1s linear forwards;
+  animation-delay: 3s;
+  transition: all 0.3s;
+}
+
+@keyframes frame1ContainerPara {
+  0% {
+    color: #010101;
+  }
+  100% {
+    color: rgba(234, 234, 234, 0.7);
+  }
+}
+
+.frame1-scroll {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  animation: frame1Scroll 1s forwards;
+  animation-delay: 6s;
+  transition: all 0.3s;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 160px;
+}
+
+@keyframes frame1Scroll {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.frame1-scroll-slide {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0px;
+  animation: frame1ScrollSlide 3s linear forwards;
+  animation-delay: 7s;
+  transition: all 0.3s;
+}
+
+@keyframes frame1ScrollSlide {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  75% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+.frame1-scroll-slide h2 {
+  height: 100px;
+  color: rgba(234, 234, 234, 0.6);
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+}
+
+.frame1-scroll-slide h2:nth-child(2) {
+  color: #eaeaea;
+}
