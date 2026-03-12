@@ -1,10 +1,10 @@
 import React from "react";
-import Frame1 from "./Animations/Frame1";
+import IntroAnimation from "./IntroAnimation";
 
 function Home() {
   return (
     <>
-      <Frame1 />
+      <IntroAnimation />
     </>
   );
 }

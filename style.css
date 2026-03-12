@@ -27,7 +27,6 @@ html {
   justify-content: center;
   flex-direction: column;
   padding-left: 160px;
-  background: #010101;
   position: relative;
   animation: frame1 1s linear forwards;
   animation-delay: 11s;
@@ -238,4 +237,278 @@ html {
 
 .frame1-scroll-slide h2:nth-child(2) {
   color: #eaeaea;
+}
+
+.frame2 {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  animation: frame2 1s linear forwards;
+  animation-delay: 6s;
+}
+
+@keyframes frame2 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.frame2-ellipse {
+  object-fit: cover;
+  animation: frame2Ellipse 2s linear forwards;
+  transition: all 0.3s;
+}
+
+@keyframes frame2Ellipse {
+  from {
+    transform: rotate(0deg);
+    width: 0px;
+  }
+  to {
+    transform: rotate(360deg);
+    width: 540px;
+  }
+}
+
+.frame2-container {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  animation: frame2Container 2s linear forwards;
+  animation-delay: 2s;
+}
+
+@keyframes frame2Container {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.frame2-container p {
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.frame2-container span {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.frame3 {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  animation: frame3 1s linear forwards;
+  animation-delay: 4s;
+}
+
+@keyframes frame3 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.frame3-background {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(-5%);
+  animation: frame3Background 0.5s linear forwards;
+  transition: all 0.3s;
+}
+
+@keyframes frame3Background {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.frame3-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frame3-glare {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 30%), -50%);
+  animation: frame3Glare 0.5s linear forwards;
+}
+
+@keyframes frame3Glare {
+  to {
+    transform: translate(calc(-50% + 150%), -50%);
+  }
+}
+
+.frame3-glare-container {
+  position: relative;
+}
+
+.frame3-glare-container img {
+  object-fit: cover;
+}
+
+.frame3-glare-container img:first-child {
+  animation: frame3GlareImg1 0.5s linear forwards;
+}
+
+@keyframes frame3GlareImg1 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.frame3-glare-container img:last-child {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: frame3GlareImg2 0.5s linear forwards;
+}
+
+@keyframes frame3GlareImg2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.frame3-text {
+  display: flex;
+  width: 708px;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.frame3-text-container {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  opacity: 0;
+  animation: frame3TextContainer 0.5s linear forwards;
+}
+
+@keyframes frame3TextContainer {
+  to {
+    opacity: 1;
+  }
+}
+
+.frame3-text-container h2 {
+  color: #eaeaea;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.frame3-text-container h2 span {
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  background: var(
+    --Text-Linear,
+    linear-gradient(45deg, #64b1fe 0%, rgba(249, 76, 255, 0.5) 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.frame3-text-container p {
+  color: rgba(234, 234, 234, 0.7);
+  text-align: center;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.44px;
+}
+
+.frame3-text-line {
+  width: 392px;
+  height: 1px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.frame3-text-line-container {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 0) 0%,
+    #fff 50%,
+    rgba(17, 17, 17, 0) 100%
+  );
+  animation: frame3TextLineContainer 0.5s linear forwards;
+}
+
+@keyframes frame3TextLineContainer {
+  to {
+    width: 100%;
+  }
 }
