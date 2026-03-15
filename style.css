@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +16,7 @@ html {
   background: #010101;
 }
 
-/* Animations */
+/* Intro Animations */
 
 .frame1 {
   width: 100%;
@@ -895,6 +894,7 @@ html {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-variant-numeric: tabular-nums;
 }
 
 .frame7-text span {
@@ -982,4 +982,407 @@ html {
   height: 100%;
   background: #0d0015;
   left: -6px;
+}
+
+/* Home */
+
+.home-banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #0d0015;
+  opacity: 0;
+  animation: homeBanner 1s linear forwards;
+}
+
+@keyframes homeBanner {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-banner-container {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 22px 230px 0px 230px;
+}
+
+.home-banner-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.home-banner-circle {
+  width: 100%;
+  object-fit: cover;
+  animation: bannerRotate 2s linear forwards;
+  animation-delay: 1s;
+  transform-origin: center center;
+  opacity: 0;
+}
+
+@keyframes bannerRotate {
+  from {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+.home-banner-stars {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.home-banner-moon {
+  position: absolute;
+  bottom: -65%;
+  width: 90%;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid #0d0015;
+  background: linear-gradient(180deg, #0d0015 20.85%, #0d0015 43.69%);
+  box-shadow:
+    0 -6px 114px 10px rgba(247, 247, 247, 0.02),
+    0 0 250px 160px rgba(3, 0, 13, 0.3) inset;
+}
+
+.home-banner-glow {
+  width: 90%;
+  height: 38px;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: homeBannerGlow 1s linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes homeBannerGlow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-banner-glow-1 {
+  border-radius: 100%;
+  background: #c233ff;
+  filter: blur(137px);
+}
+
+.home-banner-glow-2 {
+  border-radius: 100%;
+  background: #2b0049;
+  filter: blur(42px);
+}
+
+.home-banner-glow-3 {
+  border-radius: 100%;
+  background: #dc74ff;
+  filter: blur(92px);
+}
+
+.home-banner-heading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.home-banner-heading-label {
+  display: flex;
+  padding: 8px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 100px;
+  border: 1px solid #454587;
+  background: radial-gradient(
+    93.05% 93.05% at 50% 50%,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.01) 84.5%
+  );
+  box-shadow: 0 0 22px 0 rgba(94, 16, 237, 0.3) inset;
+  backdrop-filter: blur(12px);
+  color: #f7f7f8;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.home-banner-heading-label img {
+  height: 24px;
+  object-fit: cover;
+}
+
+.home-banner-heading-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.home-banner-heading-text h1 {
+  color: #eeeef6;
+  text-align: center;
+  font-family: "Bricolage Grotesque";
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.home-banner-heading-text p {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.home-banner-contact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 75px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-banner-contact-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      28.57% 26.19% at 50% 4.61%,
+      #fff 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      52.98% 31.66% at 50% 1.71%,
+      #64b1fe 0%,
+      rgba(100, 177, 254, 0) 100%
+    ),
+    #12001f;
+  backdrop-filter: blur(23.57642364501953px);
+  z-index: 1;
+  position: relative;
+}
+
+.home-banner-contact-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 70px 0px 20px 0px;
+  border-radius: 13.965px;
+  border: 1px solid var(--Linear-Bg, #010101);
+  background: #0d0015;
+  position: relative;
+  z-index: 3;
+}
+
+.home-contact-form {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  padding: 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  border: 0.8px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.home-contact-form-container {
+  display: flex;
+  width: 526px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.home-contact-form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  align-self: stretch;
+}
+
+.home-contact-form-input label {
+  color: #e5e7eb;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.home-contact-form-input input {
+  width: 100%;
+  display: flex;
+  height: 36px;
+  padding: 4px 12px;
+  align-items: center;
+  align-self: stretch;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  border: 0.8px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #6a7282;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.home-contact-form-input textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  display: flex;
+  padding: 4px 12px;
+  align-items: center;
+  align-self: stretch;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  border: 0.8px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #6a7282;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.home-banner-contact-form-button {
+  width: 100%;
+  display: flex;
+  height: 48px;
+  padding: 0 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border: none;
+  border-radius: 12px;
+  background: var(
+    --Text-Linear,
+    linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(45deg, #64b1fe 0%, rgba(249, 76, 255, 0.5) 100%)
+  );
+  color: #fff;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.home-banner-contact-form-button svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.home-banner-refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #6a7282;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.home-banner-refresh:hover {
+  color: #fff;
+}
+
+.home-banner-refresh svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.home-banner-refresh svg path {
+  transition: all 0.3s;
+}
+
+.home-banner-refresh:hover svg path {
+  stroke: #fff;
+}
+
+.home-banner-contact-fade {
+  width: 100svw;
+  height: 213px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgba(0, 0, 24, 0) 0%, #000018 81.31%);
+  z-index: 2;
 }
