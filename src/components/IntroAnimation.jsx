@@ -2,12 +2,20 @@ import React, { useState, useEffect } from "react";
 import Frame1 from "./IntroAnimation/Frame1";
 import Frame2 from "./IntroAnimation/Frame2";
 import Frame3 from "./IntroAnimation/Frame3";
+import Frame4 from "./IntroAnimation/Frame4";
+import Frame5 from "./IntroAnimation/Frame5";
+import Frame6 from "./IntroAnimation/Frame6";
+import Frame7 from "./IntroAnimation/Frame7";
 
 function IntroAnimation() {
   const frames = [
     { component: Frame1, duration: 12000 },
     { component: Frame2, duration: 7000 },
     { component: Frame3, duration: 5000 },
+    { component: Frame4, duration: 7000 },
+    { component: Frame5, duration: 6000 },
+    { component: Frame6, duration: 6000 },
+    { component: Frame7, duration: 6000 },
   ];
 
   const [currentFrame, setCurrentFrame] = useState(0);
