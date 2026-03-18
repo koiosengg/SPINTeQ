@@ -8,7 +8,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 49000);
+    }, 50000);
 
     return () => clearTimeout(timer);
   }, []);

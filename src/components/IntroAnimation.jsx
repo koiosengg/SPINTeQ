@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import Frame0 from "./IntroAnimation/Frame0";
 import Frame1 from "./IntroAnimation/Frame1";
 import Frame2 from "./IntroAnimation/Frame2";
 import Frame3 from "./IntroAnimation/Frame3";
@@ -6,6 +7,7 @@ import Frame4 from "./IntroAnimation/Frame4";
 import Frame5 from "./IntroAnimation/Frame5";
 import Frame6 from "./IntroAnimation/Frame6";
 import Frame7 from "./IntroAnimation/Frame7";
+import musicFile from "../assets/IntroAnimation/Frame0/Background Music.mp3";
 
 function IntroAnimation() {
   const frames = [
@@ -19,8 +21,13 @@ function IntroAnimation() {
   ];
 
   const [currentFrame, setCurrentFrame] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const [playMusic, setPlayMusic] = useState(false);
+
+  const audioRef = useRef(null);
 
   useEffect(() => {
+    if (!hasStarted) return;
     if (currentFrame >= frames.length) return;
 
     const timer = setTimeout(() => {
@@ -28,13 +35,47 @@ function IntroAnimation() {
     }, frames[currentFrame].duration);
 
     return () => clearTimeout(timer);
+  }, [currentFrame, hasStarted]);
+
+  useEffect(() => {
+    if (hasStarted && playMusic && audioRef.current) {
+      audioRef.current.volume = 0.5;
+      audioRef.current.play().catch(() => {});
+    }
+  }, [hasStarted, playMusic]);
+
+  useEffect(() => {
+    if (currentFrame >= frames.length && audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
   }, [currentFrame]);
+
+  if (!hasStarted) {
+    return (
+      <Frame0
+        onYes={() => {
+          setPlayMusic(true);
+          setHasStarted(true);
+        }}
+        onNo={() => {
+          setPlayMusic(false);
+          setHasStarted(true);
+        }}
+      />
+    );
+  }
 
   if (currentFrame >= frames.length) return null;
 
   const ActiveFrame = frames[currentFrame].component;
 
-  return <ActiveFrame />;
+  return (
+    <>
+      <audio ref={audioRef} src={musicFile} />
+      <ActiveFrame />
+    </>
+  );
 }
 
 export default IntroAnimation;
