@@ -1,26 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import IntroAnimation from "./IntroAnimation";
 import Banner from "./Home/Banner";
+import Frame4 from "./IntroAnimation/Frame4";
 
 function Home() {
-  const [showIntro, setShowIntro] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIntro(false);
-    }, 50000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  const [introFinished, setIntroFinished] = useState(false);
 
   return (
     <>
-      {showIntro ? (
-        <IntroAnimation />
+      {!introFinished ? (
+        <IntroAnimation onFinish={() => setIntroFinished(true)} />
       ) : (
-        <>
-          <Banner />
-        </>
+        <Banner />
       )}
     </>
   );

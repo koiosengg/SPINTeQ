@@ -1467,3 +1467,233 @@ html {
   background: linear-gradient(180deg, rgba(0, 0, 24, 0) 0%, #000018 81.31%);
   z-index: 2;
 }
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+  .mobile {
+    display: flex;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  /* Intro Animations */
+
+  .frame0 {
+    padding: 48px 20px;
+  }
+
+  .frame0 h1 {
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  .frame0 h1 span {
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  .frame1 {
+    padding: 48px 20px;
+  }
+
+  .frame1-container {
+    gap: 8px;
+  }
+
+  .frame1-container-heading {
+    gap: 8px;
+  }
+
+  .frame1-container-heading p {
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .frame1-container-heading span {
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .frame1-container-heading h1 {
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .frame1-container-para {
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .frame1-scroll {
+    padding-left: 80px;
+  }
+
+  .frame1-scroll {
+    height: 30px;
+  }
+
+  @keyframes frame1ScrollSlide {
+    0% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(-30px);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    75% {
+      transform: translateY(-60px);
+    }
+    100% {
+      transform: translateY(-60px);
+    }
+  }
+
+  .frame1-scroll-slide h2 {
+    height: 30px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .frame2 {
+    padding: 48px 20px;
+  }
+
+  @keyframes frame2Ellipse {
+    from {
+      transform: rotate(0deg);
+      width: 0px;
+    }
+    to {
+      transform: rotate(360deg);
+      width: 100%;
+    }
+  }
+
+  .frame2-container {
+    padding: 0px 20px;
+  }
+
+  .frame2-container p {
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  .frame2-container span {
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  .frame3-background {
+    height: 100%;
+  }
+
+  .frame3-glare {
+    transform: translate(calc(-50% + 10%), -50%);
+    animation: frame3Glare 0.5s linear forwards;
+  }
+
+  @keyframes frame3Glare {
+    to {
+      transform: translate(calc(-50% + 100%), -50%);
+    }
+  }
+
+  .frame3-glare-container img {
+    height: 189px;
+    object-fit: cover;
+  }
+
+  .frame3-text {
+    width: 100%;
+    padding: 0px 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .frame3-text-container {
+    gap: 20px;
+  }
+
+  .frame3-text-container h2 {
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .frame3-text-container h2 span {
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+  }
+
+  .frame3-text-container p {
+    color: rgba(234, 234, 234, 0.7);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.32px;
+  }
+
+  .frame4-ellipse {
+    width: 100%;
+  }
+
+  .frame4 .frame2-container p {
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.4px;
+  }
+}

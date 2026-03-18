@@ -9,7 +9,7 @@ import Frame6 from "./IntroAnimation/Frame6";
 import Frame7 from "./IntroAnimation/Frame7";
 import musicFile from "../assets/IntroAnimation/Frame0/Background Music.mp3";
 
-function IntroAnimation() {
+function IntroAnimation({ onFinish }) {
   const frames = [
     { component: Frame1, duration: 12000 },
     { component: Frame2, duration: 7000 },
@@ -66,7 +66,10 @@ function IntroAnimation() {
     );
   }
 
-  if (currentFrame >= frames.length) return null;
+  if (currentFrame >= frames.length) {
+    onFinish(); 
+    return null;
+  }
 
   const ActiveFrame = frames[currentFrame].component;
 
