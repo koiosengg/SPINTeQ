@@ -51,6 +51,12 @@ function IntroAnimation({ onFinish }) {
     }
   }, [currentFrame]);
 
+  useEffect(() => {
+    if (currentFrame === frames.length) {
+      onFinish?.();
+    }
+  }, [currentFrame]);
+
   if (!hasStarted) {
     return (
       <Frame0
@@ -66,10 +72,7 @@ function IntroAnimation({ onFinish }) {
     );
   }
 
-  if (currentFrame >= frames.length) {
-    onFinish(); 
-    return null;
-  }
+  if (currentFrame >= frames.length) return null;
 
   const ActiveFrame = frames[currentFrame].component;
 

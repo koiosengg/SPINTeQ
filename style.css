@@ -701,13 +701,6 @@ html {
 
 .frame5-container-text h2.frame5-active-text {
   color: #fff;
-  text-align: center;
-  font-family: Inter;
-  font-size: 52px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: 1.04px;
 }
 
 .frame6 {
@@ -1695,5 +1688,174 @@ html {
     font-weight: 500;
     line-height: 120%;
     letter-spacing: 0.4px;
+  }
+
+  .frame5-background {
+    height: 100%;
+  }
+
+  .frame5-container {
+    width: 100%;
+  }
+
+  .frame5-container p {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .frame5-container-text {
+    gap: 8px;
+  }
+
+  .frame5-container-text h2 {
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.48px;
+  }
+
+  .frame6-text {
+    padding: 0px 20px;
+  }
+
+  .frame6-text p {
+    color: rgba(234, 234, 234, 0.7);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .frame6-text h2 {
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  .frame7-container {
+    flex-direction: column;
+    padding: 0px 20px;
+  }
+
+  .frame7-text {
+    gap: 16px;
+  }
+
+  .frame7-text h2 {
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  .frame7-text p {
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .frame7-text span {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+  }
+
+  /* Home */
+
+  .home-banner-container {
+    padding: 200px 40px 0px 40px;
+    align-items: center;
+  }
+
+  .home-banner-glow {
+    filter: blur(32px);
+  }
+
+  .home-banner-heading-label {
+    display: flex;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: #f7f7f8;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .home-banner-heading-label img {
+    height: 12px;
+  }
+
+  .home-banner-heading {
+    transform: translate(-50%, calc(-50% + 20px));
+  }
+
+  .home-banner-heading-text h1 {
+    color: #eeeef6;
+    text-align: center;
+    font-family: "Bricolage Grotesque";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .home-banner-heading-text p {
+    color: rgba(250, 250, 250, 0.9);
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .home-banner-contact {
+    padding: 0px 20px;
+  }
+
+  .home-banner-contact-container {
+    padding: 10px;
+  }
+
+  .home-banner-contact-div {
+    padding: 40px 20px 20px 20px;
+  }
+
+  .home-contact-form {
+    padding: 20px;
+  }
+
+  .home-contact-form-container {
+    width: 100%;
+    padding: 10px 0px;
   }
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function Frame7() {
-  const targetDate = new Date("March 19, 2026 12:00:00").getTime();
+  const targetDate = new Date("May 31, 2026 12:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState(calculateTime());
   const [leftAngle, setLeftAngle] = useState(80);
