@@ -1253,6 +1253,12 @@ html {
   line-height: 150%;
 }
 
+.home-banner-heading-text img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
 .home-banner-contact {
   width: 100%;
   display: flex;
@@ -1812,10 +1818,6 @@ html {
 
   .home-banner-heading-label img {
     height: 12px;
-  }
-
-  .home-banner-heading {
-    transform: translate(-50%, calc(-50% + 20px));
   }
 
   .home-banner-heading-text h1 {

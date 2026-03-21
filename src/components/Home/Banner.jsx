@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Circle from "../../assets/Home/Banner/Circle.png";
 import Stars from "../../assets/Home/Banner/Stars.png";
 import Thunder from "../../assets/Home/Banner/Thunder.png";
+import Logo from "/Logo.png";
 
 function Banner() {
   const imgRef = useRef(null);
@@ -51,8 +52,7 @@ function Banner() {
               Launching Soon
             </div>
             <div className="home-banner-heading-text">
-              <h1>SPINTeQ Logo</h1>
-              <p>Aligned . Strengthened . Forward</p>
+              <img src={Logo} alt="Sinteq Logo"/>
             </div>
           </div>
         </div>

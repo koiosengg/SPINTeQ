@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function Frame7() {
-  const targetDate = new Date("May 31, 2026 12:00:00").getTime();
+  const targetDate = new Date("April 20, 2026 12:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState(calculateTime());
   const [leftAngle, setLeftAngle] = useState(80);
@@ -67,7 +67,7 @@ function Frame7() {
         </div>
 
         <div className="frame7-text">
-          <h2>The Next Phase Begins Soon</h2>
+          <h2>The Next Phase has Begun.</h2>
 
           <p>
             {String(timeLeft.days).padStart(2, "0")} :
