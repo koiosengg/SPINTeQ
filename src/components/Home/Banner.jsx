@@ -52,7 +52,7 @@ function Banner() {
               Launching Soon
             </div>
             <div className="home-banner-heading-text">
-              <img src={Logo} alt="Sinteq Logo"/>
+              <img src={Logo} alt="Sinteq Logo" />
             </div>
           </div>
         </div>
