@@ -1,20 +1,24 @@
-import React, { useState } from "react";
-import IntroAnimation from "./IntroAnimation";
+import React from "react";
 import Banner from "./Home/Banner";
-import Frame4 from "./IntroAnimation/Frame4";
+import Problem from "./Home/Problem";
+import Transformation from "./Home/Transformation";
+import Industries from "./Home/Industries";
+import System from "./Home/System";
+import Core from "./Home/Core";
+import Build from "./Home/Build";
 
-function Home() {
-  const [introFinished, setIntroFinished] = useState(false);
-
+const Home = () => {
   return (
-    <>
-      {!introFinished ? (
-        <IntroAnimation onFinish={() => setIntroFinished(true)} />
-      ) : (
-        <Banner />
-      )}
-    </>
+    <section className="home">
+      <Banner />
+      <Problem />
+      <Transformation />
+      <Industries />
+      <System />
+      <Core />
+      <Build />
+    </section>
   );
-}
+};
 
 export default Home;
