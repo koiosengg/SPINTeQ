@@ -8,14 +8,15 @@ function World() {
       </div>
       <div className="world-content">
         <h2 className="world-heading">
-          Start Your Autonomous
+          We Don't Predict The Future.
           <br />
-          Transformation
+          We Build It.
         </h2>
         <p className="world-subtitle">
-          Turn complexity into clarity. Let your systems think, act, and evolve.
+          Partner with us to create intelligent, autonomous solutions that
+          drive the next era of innovation.
         </p>
-        <button className="world-cta">Get in Touch</button>
+        <button className="world-cta">Start Your Journey Today</button>
       </div>
     </section>
   );

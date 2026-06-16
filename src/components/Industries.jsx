@@ -1,15 +1,17 @@
 import Banner from "./Industries/Banner";
-import Bento from "./Industries/Bento";
-import System from "./Home/System";
-import Build from "./Home/Build";
+import Intelligence from "./Industries/Intelligence";
+import Pillars from "./Industries/Pillars";
+import Brain from "./Industries/Brain";
+import Economics from "./Industries/Economics";
 
 const Industries = () => {
   return (
     <>
       <Banner />
-      <Bento />
-      <System />
-      <Build />
+      <Intelligence />
+      <Economics />
+      <Pillars />
+      <Brain />
     </>
   );
 };

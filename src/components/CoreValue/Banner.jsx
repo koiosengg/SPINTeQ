@@ -1,132 +1,98 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 
-const Banner = () => (
-  <section className="core-value-banner">
-    <div className="core-value-banner-lines">
-      <svg
-        viewBox="0 0 1440 320"
-        preserveAspectRatio="none"
-        className="core-value-banner-lines-svg"
-      >
-        <defs>
-          <linearGradient id="cv-lineGrad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="rgba(255,255,255,0)" />
-            <stop offset="50%" stopColor="rgba(255,255,255,0.15)" />
-            <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-          </linearGradient>
-        </defs>
-        <line
-          x1="0"
-          y1="240"
-          x2="1440"
-          y2="240"
-          stroke="url(#cv-lineGrad)"
-          strokeWidth="1"
-        />
-        <line
-          x1="0"
-          y1="280"
-          x2="1440"
-          y2="280"
-          stroke="url(#cv-lineGrad)"
-          strokeWidth="1"
-        />
-        <line
-          x1="0"
-          y1="310"
-          x2="1440"
-          y2="310"
-          stroke="url(#cv-lineGrad)"
-          strokeWidth="1"
-        />
-        <line
-          x1="200"
-          y1="240"
-          x2="200"
-          y2="320"
-          stroke="rgba(255,255,255,0.1)"
-          strokeWidth="1"
-        />
-        <line
-          x1="400"
-          y1="240"
-          x2="400"
-          y2="320"
-          stroke="rgba(255,255,255,0.1)"
-          strokeWidth="1"
-        />
-        <line
-          x1="600"
-          y1="240"
-          x2="600"
-          y2="320"
-          stroke="rgba(255,255,255,0.1)"
-          strokeWidth="1"
-        />
-        <line
-          x1="800"
-          y1="240"
-          x2="800"
-          y2="320"
-          stroke="rgba(255,255,255,0.1)"
-          strokeWidth="1"
-        />
-        <line
-          x1="1000"
-          y1="240"
-          x2="1000"
-          y2="320"
-          stroke="rgba(255,255,255,0.1)"
-          strokeWidth="1"
-        />
-        <line
-          x1="1200"
-          y1="240"
-          x2="1200"
-          y2="320"
-          stroke="rgba(255,255,255,0.1)"
-          strokeWidth="1"
-        />
-        <rect
-          x="180"
-          y="260"
-          width="40"
-          height="20"
-          fill="none"
-          stroke="rgba(255,255,255,0.08)"
-          strokeWidth="1"
-        />
-        <rect
-          x="580"
-          y="250"
-          width="40"
-          height="30"
-          fill="none"
-          stroke="rgba(255,255,255,0.08)"
-          strokeWidth="1"
-        />
-        <rect
-          x="980"
-          y="270"
-          width="40"
-          height="20"
-          fill="none"
-          stroke="rgba(255,255,255,0.08)"
-          strokeWidth="1"
-        />
-      </svg>
-    </div>
-    <div className="core-value-banner-content">
-      <h1 className="core-value-banner-heading">
-        Engineering
-        <br />
-        Intelligent Transformation
-      </h1>
-      <p className="core-value-banner-subtitle">
-        From fragmented operations to autonomous enterprises
-      </p>
-    </div>
-  </section>
-);
+const CELL = 120;
+const PERSP = 800;
+const ROT_DEG = 80;
+const cosA = Math.cos((ROT_DEG * Math.PI) / 180);
+const sinA = Math.sin((ROT_DEG * Math.PI) / 180);
+const SCROLL_SPEED = CELL / 5;
+
+function project(gx, gy, W) {
+  const scale = PERSP / (PERSP - gy * sinA);
+  return { x: 0.5 * W + (gx - 1.5 * W) * scale, y: gy * cosA * scale };
+}
+
+function Banner() {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    let animId;
+    let offset = 0;
+    let lastTime = null;
+    const setSize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    setSize();
+    const ro = new ResizeObserver(setSize);
+    ro.observe(canvas);
+    function draw(timestamp) {
+      if (lastTime === null) lastTime = timestamp;
+      const dt = Math.min((timestamp - lastTime) / 1000, 0.1);
+      lastTime = timestamp;
+      offset = (offset + SCROLL_SPEED * dt) % CELL;
+      const W = canvas.width, H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+      const maxGY = (H * PERSP) / (cosA * PERSP + H * sinA);
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.18)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      const numRows = Math.ceil(maxGY / CELL) + 2;
+      for (let i = 0; i < numRows; i++) {
+        const gy = i * CELL + offset;
+        if (gy <= 0 || gy >= maxGY) continue;
+        const cy = (gy * cosA * PERSP) / (PERSP - gy * sinA);
+        ctx.moveTo(0, cy);
+        ctx.lineTo(W, cy);
+      }
+      const numCols = Math.ceil(W / CELL);
+      for (let i = 0; i <= numCols; i++) {
+        const gx = W + i * CELL;
+        const botX = project(gx, maxGY, W).x;
+        ctx.moveTo(i * CELL, 0);
+        ctx.lineTo(botX, H);
+      }
+      ctx.stroke();
+      animId = requestAnimationFrame(draw);
+    }
+    animId = requestAnimationFrame(draw);
+    return () => {
+      cancelAnimationFrame(animId);
+      ro.disconnect();
+    };
+  }, []);
+
+  return (
+    <section className="core-value-banner">
+      {/* ── Animated glow bg ── */}
+      <div className="solutions-banner-rects">
+        <div className="sbr sbr-1" />
+        <div className="sbr sbr-2" />
+        <div className="sbr sbr-3" />
+        <div className="sbr sbr-4" />
+        <div className="sbr sbr-5" />
+      </div>
+      <div className="home-banner-lines">
+        <canvas ref={canvasRef} className="home-banner-canvas" />
+      </div>
+
+      {/* ── Content ── */}
+      <div className="solutions-banner-content">
+        <div className="solutions-banner-badge">
+          <span>Core Value</span>
+        </div>
+        <h1 className="solutions-banner-heading">
+          Engineering <br />
+          Intelligent Transformation
+        </h1>
+        <p className="solutions-banner-subtitle">
+          From fragmented operations to autonomous enterprises
+        </p>
+      </div>
+    </section>
+  );
+}
 
 export default Banner;

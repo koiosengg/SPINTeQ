@@ -1,9 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/Navbar/Logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // If mobile menu is open, do not hide navbar
+      if (isMenuOpen) return;
+
+      // Hide if scrolling down and past 100px threshold, show if scrolling up
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMenuOpen]);
 
   const links = [
     { path: "/core-value", label: "Values" },
@@ -21,7 +44,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${isMenuOpen ? "menu-open" : ""}`}>
+    <nav className={`navbar ${isMenuOpen ? "menu-open" : ""} ${!isVisible ? "navbar-hidden" : ""}`}>
       <div className="navbar-inner">
         <NavLink to="/" className="navbar-logo" onClick={closeMenu}>
           <img src={Logo} alt="SPINTeQ" />
