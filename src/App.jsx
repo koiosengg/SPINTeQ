@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -10,6 +10,14 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import World from "./components/Home/World";
+
+function ConditionalWorld() {
+  const location = useLocation();
+  if (location.pathname === "/contact") {
+    return null;
+  }
+  return <World />;
+}
 
 function App() {
   return (
@@ -27,7 +35,7 @@ function App() {
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
-      <World />
+      <ConditionalWorld />
       <Footer />
     </BrowserRouter>
   );

@@ -20,7 +20,11 @@ const defaultItems = [
   },
 ];
 
-function Core({ label = "CORE IDEA", title = "How SPINTeQ works", items = defaultItems }) {
+function Core({
+  label = "Core data",
+  title = "How SPINTeQ works",
+  items = defaultItems,
+}) {
   return (
     <section className="core">
       <div className="core-header">
@@ -31,8 +35,10 @@ function Core({ label = "CORE IDEA", title = "How SPINTeQ works", items = defaul
         {items.map((item, index) => (
           <div className="core-card" key={index}>
             <div className="core-icon">{item.icon}</div>
-            <h3 className="core-card-title">{item.title}</h3>
-            <p className="core-card-desc">{item.desc}</p>
+            <div className="core-card-info">
+              <h3 className="core-card-title">{item.title}</h3>
+              <p className="core-card-desc">{item.desc}</p>
+            </div>
           </div>
         ))}
       </div>

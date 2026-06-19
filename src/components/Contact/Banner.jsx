@@ -1,10 +1,21 @@
 import React, { useRef, useState, useEffect } from "react";
 import Circle from "../../assets/Home/Banner/Circle.png";
-import Stars from "../../assets/Home/Banner/Stars.png";
-import Thunder from "../../assets/Home/Banner/Thunder.png";
+
+const CELL = 120;
+const PERSP = 800;
+const ROT_DEG = 80;
+const cosA = Math.cos((ROT_DEG * Math.PI) / 180);
+const sinA = Math.sin((ROT_DEG * Math.PI) / 180);
+const SCROLL_SPEED = CELL / 5;
+
+function project(gx, gy, W) {
+  const scale = PERSP / (PERSP - gy * sinA);
+  return { x: 0.5 * W + (gx - 1.5 * W) * scale, y: gy * cosA * scale };
+}
 
 const ContactBanner = () => {
   const circleRef = useRef(null);
+  const canvasRef = useRef(null);
   const [containerHeight, setContainerHeight] = useState(null);
 
   const updateHeight = () => {
@@ -24,8 +35,76 @@ const ContactBanner = () => {
     return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
+  // Effect for the grid canvas lines animation
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    let animId;
+    let offset = 0;
+    let lastTime = null;
+
+    const setSize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    setSize();
+
+    const ro = new ResizeObserver(setSize);
+    ro.observe(canvas);
+
+    function draw(timestamp) {
+      if (lastTime === null) lastTime = timestamp;
+      const dt = Math.min((timestamp - lastTime) / 1000, 0.1);
+      lastTime = timestamp;
+      offset = (offset + SCROLL_SPEED * dt) % CELL;
+      const W = canvas.width,
+        H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+      const maxGY = (H * PERSP) / (cosA * PERSP + H * sinA);
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.18)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      const numRows = Math.ceil(maxGY / CELL) + 2;
+      for (let i = 0; i < numRows; i++) {
+        const gy = i * CELL + offset;
+        if (gy <= 0 || gy >= maxGY) continue;
+        const cy = (gy * cosA * PERSP) / (PERSP - gy * sinA);
+        ctx.moveTo(0, cy);
+        ctx.lineTo(W, cy);
+      }
+      const numCols = Math.ceil(W / CELL);
+      for (let i = 0; i <= numCols; i++) {
+        const gx = W + i * CELL;
+        const botX = project(gx, maxGY, W).x;
+        ctx.moveTo(i * CELL, 0);
+        ctx.lineTo(botX, H);
+      }
+      ctx.stroke();
+      animId = requestAnimationFrame(draw);
+    }
+
+    animId = requestAnimationFrame(draw);
+    return () => {
+      cancelAnimationFrame(animId);
+      ro.disconnect();
+    };
+  }, []);
+
   return (
     <section className="contact-banner">
+      {/* ── Animated glow bg ── */}
+      <div className="solutions-banner-rects">
+        <div className="sbr sbr-1" />
+        <div className="sbr sbr-2" />
+        <div className="sbr sbr-3" />
+        <div className="sbr sbr-4" />
+        <div className="sbr sbr-5" />
+      </div>
+      <div className="home-banner-lines">
+        <canvas ref={canvasRef} className="home-banner-canvas" />
+      </div>
+
       {/* Arc top */}
       <div
         className="contact-banner-container"
@@ -39,15 +118,19 @@ const ContactBanner = () => {
             className="contact-banner-circle"
             onLoad={updateHeight}
           />
-          <img src={Stars} alt="Stars" className="contact-banner-stars" />
-          <div className="contact-banner-moon" />
 
-          <div className="contact-banner-heading">
-            <div className="contact-banner-heading-text">
-              <h1>Contact &amp; Support</h1>
-              <p>
-                The spiritual anatomy that moves from Effort to Effortless
-                Intelligence.
+          <div className="solutions-banner-content">
+            <div className="solutions-banner-badge">
+              <span>Contact</span>
+            </div>
+            <div className="solutions-banner-text-group">
+              <h1 className="solutions-banner-heading">
+                Let's Build The Future <br />
+                Together
+              </h1>
+              <p className="solutions-banner-subtitle">
+                Connect with our experts to explore solutions, <br />
+                resolve challenges, and accelerate journey.
               </p>
             </div>
           </div>
@@ -57,77 +140,45 @@ const ContactBanner = () => {
       {/* Form card */}
       <div className="contact-banner-form-wrap">
         <div className="contact-banner-form-container">
-          <div className="contact-banner-form-div">
-            <form className="contact-form">
-              <div className="contact-form-container">
-                <div className="contact-form-input">
-                  <label htmlFor="cb-name">Name</label>
-                  <input
-                    type="text"
-                    id="cb-name"
-                    name="name"
-                    placeholder="Name"
-                    required
-                    autoComplete="name"
-                  />
-                </div>
-                <div className="contact-form-input">
-                  <label htmlFor="cb-email">Email</label>
-                  <input
-                    type="email"
-                    id="cb-email"
-                    name="email"
-                    placeholder="email@example.com"
-                    required
-                    autoComplete="email"
-                  />
-                </div>
-                <div className="contact-form-input">
-                  <label htmlFor="cb-message">Message</label>
-                  <textarea
-                    id="cb-message"
-                    name="message"
-                    placeholder="Tell us about your project or questions..."
-                    rows="4"
-                    required
-                  />
-                </div>
-                <button type="submit" className="contact-form-submit-button">
-                  Submit
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                  >
-                    <g clipPath="url(#cbclip)">
-                      <path
-                        d="M9.69021 14.4575C9.71554 14.5206 9.75957 14.5744 9.81639 14.6118C9.87322 14.6492 9.94011 14.6683 10.0081 14.6665C10.0761 14.6648 10.1419 14.6423 10.1968 14.6021C10.2516 14.5618 10.2928 14.5058 10.3149 14.4415L14.6482 1.77479C14.6695 1.71571 14.6736 1.65179 14.66 1.59049C14.6463 1.52919 14.6154 1.47305 14.571 1.42864C14.5266 1.38423 14.4705 1.35338 14.4092 1.33971C14.3479 1.32604 14.2839 1.33012 14.2249 1.35145L1.55821 5.68479C1.49388 5.70685 1.43783 5.74806 1.39759 5.8029C1.35736 5.85774 1.33486 5.92357 1.33312 5.99156C1.33138 6.05955 1.35047 6.12645 1.38785 6.18327C1.42523 6.24009 1.47909 6.28412 1.54221 6.30945L6.82888 8.42945C6.996 8.49636 7.14785 8.59643 7.27526 8.72361C7.40266 8.85079 7.503 9.00245 7.57021 9.16945L9.69021 14.4575Z"
-                        stroke="white"
-                        strokeWidth="1.33333"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M14.5697 1.4314L7.27637 8.72406"
-                        stroke="white"
-                        strokeWidth="1.33333"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="cbclip">
-                        <rect width="16" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
+          <form className="contact-form">
+            <div className="contact-form-container">
+              <div className="contact-form-input">
+                <label htmlFor="cb-name">Name*</label>
+                <input
+                  type="text"
+                  id="cb-name"
+                  name="name"
+                  placeholder="Name"
+                  required
+                  autoComplete="name"
+                />
               </div>
-            </form>
-          </div>
-          <div className="contact-banner-fade" />
+              <div className="contact-form-input">
+                <label htmlFor="cb-email">Email*</label>
+                <input
+                  type="email"
+                  id="cb-email"
+                  name="email"
+                  placeholder="email@example.com"
+                  required
+                  autoComplete="email"
+                />
+              </div>
+              <div className="contact-form-input">
+                <label htmlFor="cb-message">Message*</label>
+                <textarea
+                  id="cb-message"
+                  name="message"
+                  placeholder="Tell us about your project or questions..."
+                  rows="4"
+                  required
+                />
+              </div>
+              <button type="submit" className="contact-form-submit-button">
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

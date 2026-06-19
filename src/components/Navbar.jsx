@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/Navbar/Logo.png";
+import Logo1 from "../assets/Navbar/Logo1.png";
+import Logo2 from "../assets/Navbar/Logo2.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,7 +48,8 @@ const Navbar = () => {
     <nav className={`navbar ${isMenuOpen ? "menu-open" : ""} ${!isVisible ? "navbar-hidden" : ""}`}>
       <div className="navbar-inner">
         <NavLink to="/" className="navbar-logo" onClick={closeMenu}>
-          <img src={Logo} alt="SPINTeQ" />
+          <img src={Logo1} className="navbar-logo-1" alt="SPINTeQ Logo Part 1" />
+          <img src={Logo2} className="navbar-logo-2" alt="SPINTeQ Logo Part 2" />
         </NavLink>
         
         <button className="navbar-toggle" onClick={toggleMenu} aria-label="Toggle menu">

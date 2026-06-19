@@ -21,7 +21,10 @@ function Banner() {
     let animId;
     let offset = 0;
     let lastTime = null;
-    const setSize = () => { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; };
+    const setSize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
     setSize();
     const ro = new ResizeObserver(setSize);
     ro.observe(canvas);
@@ -41,19 +44,24 @@ function Banner() {
         const gy = i * CELL + offset;
         if (gy <= 0 || gy >= maxGY) continue;
         const cy = (gy * cosA * PERSP) / (PERSP - gy * sinA);
-        ctx.moveTo(0, cy); ctx.lineTo(W, cy);
+        ctx.moveTo(0, cy);
+        ctx.lineTo(W, cy);
       }
       const numCols = Math.ceil(W / CELL);
       for (let i = 0; i <= numCols; i++) {
         const gx = W + i * CELL;
         const botX = project(gx, maxGY, W).x;
-        ctx.moveTo(i * CELL, 0); ctx.lineTo(botX, H);
+        ctx.moveTo(i * CELL, 0);
+        ctx.lineTo(botX, H);
       }
       ctx.stroke();
       animId = requestAnimationFrame(draw);
     }
     animId = requestAnimationFrame(draw);
-    return () => { cancelAnimationFrame(animId); ro.disconnect(); };
+    return () => {
+      cancelAnimationFrame(animId);
+      ro.disconnect();
+    };
   }, []);
 
   return (
@@ -75,13 +83,15 @@ function Banner() {
         <div className="solutions-banner-badge">
           <span>Industries</span>
         </div>
-        <h1 className="solutions-banner-heading">
-          The Future Of Operations <br />
-          Starts Here
-        </h1>
-        <p className="solutions-banner-subtitle">
-          Transforming operations with intelligent automation and AI across sectors
-        </p>
+        <div className="solutions-banner-text-group">
+          <h1 className="solutions-banner-heading">
+            The Future Of Operations <br />
+            Starts Here
+          </h1>
+          <p className="solutions-banner-subtitle">
+            Transforming operations with intelligent automation and AI across sectors
+          </p>
+        </div>
       </div>
     </section>
   );

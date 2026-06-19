@@ -27,8 +27,11 @@ const slides = [
 function Economics() {
   const [current, setCurrent] = useState(0);
 
-  const prev = () => setCurrent((c) => (c - 1 + slides.length) % slides.length);
-  const next = () => setCurrent((c) => (c + 1) % slides.length);
+  const isFirst = current === 0;
+  const isLast  = current === slides.length - 1;
+
+  const prev = () => { if (!isFirst) setCurrent((c) => c - 1); };
+  const next = () => { if (!isLast)  setCurrent((c) => c + 1); };
 
   const slide = slides[current];
 
@@ -55,8 +58,9 @@ function Economics() {
 
           <div className="ind-economics-arrows">
             <button
-              className="ind-economics-arrow"
+              className={`ind-economics-arrow${!isFirst ? " ind-economics-arrow--active" : ""}`}
               onClick={prev}
+              disabled={isFirst}
               aria-label="Previous slide"
             >
               <svg
@@ -91,8 +95,9 @@ function Economics() {
               </svg>
             </button>
             <button
-              className="ind-economics-arrow"
+              className={`ind-economics-arrow${!isLast ? " ind-economics-arrow--active" : ""}`}
               onClick={next}
+              disabled={isLast}
               aria-label="Next slide"
             >
               <svg

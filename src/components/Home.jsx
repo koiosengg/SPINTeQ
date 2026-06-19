@@ -5,7 +5,10 @@ import Transformation from "./Home/Transformation";
 import Industries from "./Home/Industries";
 import System from "./Home/System";
 import Core from "./Home/Core";
-import Build from "./Home/Build";
+
+import ExploreSolutions from "./CoreValue/ExploreSolutions";
+import img12 from "../assets/CoreValue/Rectangle 12.png";
+import img13 from "../assets/CoreValue/Rectangle 13.png";
 
 const Home = () => {
   return (
@@ -14,9 +17,32 @@ const Home = () => {
       <Problem />
       <Transformation />
       <Industries />
+      {/* Section 1: Explore Solutions (Standard Layout) */}
+      <ExploreSolutions
+        title={
+          <>
+            Solutions That Drive <span>Autonomous Business</span> Growth
+          </>
+        }
+        description="Explore intelligent solutions designed to solve complex operational challenges."
+        image={img12}
+        imageAlt="AI Solution Optimizer Dashboard"
+      />
       <System />
       <Core />
-      <Build />
+
+      {/* Section 2: Explore Solutions */}
+      <ExploreSolutions
+        title={
+          <>
+            Discover <span>How AI Powers</span> Industry - Wide Operational
+            Excellence
+          </>
+        }
+        description="See how AI transforms safety, efficiency, and operational performance."
+        image={img13}
+        imageAlt="Seven Pillars of Autonomous Operations Diagram"
+      />
     </section>
   );
 };

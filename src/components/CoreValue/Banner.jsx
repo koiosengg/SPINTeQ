@@ -83,13 +83,15 @@ function Banner() {
         <div className="solutions-banner-badge">
           <span>Core Value</span>
         </div>
-        <h1 className="solutions-banner-heading">
-          Engineering <br />
-          Intelligent Transformation
-        </h1>
-        <p className="solutions-banner-subtitle">
-          From fragmented operations to autonomous enterprises
-        </p>
+        <div className="solutions-banner-text-group">
+          <h1 className="solutions-banner-heading">
+            Engineering <br />
+            Intelligent Transformation
+          </h1>
+          <p className="solutions-banner-subtitle">
+            From fragmented operations to autonomous enterprises
+          </p>
+        </div>
       </div>
     </section>
   );

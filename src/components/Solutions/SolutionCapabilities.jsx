@@ -109,8 +109,8 @@ const capabilitiesData = [
             y2="48.9681"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="#191919" />
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="#191919" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_315_1601"
@@ -120,8 +120,8 @@ const capabilitiesData = [
             y2="46"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="#191919" />
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="#191919" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_315_1601"
@@ -131,8 +131,8 @@ const capabilitiesData = [
             y2="52"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="#191919" />
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="#191919" />
           </linearGradient>
         </defs>
       </svg>
@@ -166,8 +166,8 @@ const capabilitiesData = [
             y2="48.9681"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="#191919" />
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="#191919" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_315_1601"
@@ -177,8 +177,8 @@ const capabilitiesData = [
             y2="46"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="#191919" />
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="#191919" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_315_1601"
@@ -188,8 +188,8 @@ const capabilitiesData = [
             y2="52"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="#191919" />
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="#191919" />
           </linearGradient>
         </defs>
       </svg>
@@ -223,8 +223,8 @@ const capabilitiesData = [
             y2="48.9681"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="#191919" />
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="#191919" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_315_1601"
@@ -234,8 +234,8 @@ const capabilitiesData = [
             y2="46"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="#191919" />
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="#191919" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_315_1601"
@@ -245,8 +245,8 @@ const capabilitiesData = [
             y2="52"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="#191919" />
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="#191919" />
           </linearGradient>
         </defs>
       </svg>

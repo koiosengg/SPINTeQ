@@ -2,7 +2,7 @@ function Industries({ mode }) {
   const industries = [
     {
       title: "Logistics",
-      desc: "Lorem Ipsum dolor amet",
+      desc: "Lorem ipsum dolor sit amet consectetur. Diam ipsum et nec augue fringilla donec egestas donec.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ function Industries({ mode }) {
     },
     {
       title: "Manufacturing",
-      desc: "Lorem Ipsum dolor amet",
+      desc: "Lorem ipsum dolor sit amet consectetur. Diam ipsum et nec augue fringilla donec egestas donec.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ function Industries({ mode }) {
           viewBox="0 0 40 40"
           fill="none"
         >
-          <g clip-path="url(#clip0_490_213)">
+          <g clipPath="url(#clip0_490_213)">
             <path
               d="M40 25.7227V30H37.5V26.7773L35.3711 24.6289L35.4297 24.5703C34.9089 24.8568 34.3294 25 33.6914 25C33.1185 25 32.5911 24.8828 32.1094 24.6484L30 26.7773V30H27.5V25.7227L30.332 22.9102L30.2734 22.7734L25.3711 11.7969L17.4023 20.0195C17.4284 20.2279 17.4479 20.4297 17.4609 20.625C17.474 20.8203 17.487 21.0286 17.5 21.25V37.5H20V40H0V37.5H2.5V21.25C2.5 20.2604 2.68229 19.3294 3.04688 18.457C3.41146 17.5846 3.90625 16.8099 4.53125 16.1328C5.15625 15.4557 5.89844 14.9089 6.75781 14.4922C7.61719 14.0755 8.54167 13.8346 9.53125 13.7695L21.4062 1.52344C21.875 1.02865 22.4219 0.651042 23.0469 0.390625C23.6719 0.130208 24.3229 0 25 0C25.4557 0 25.9115 0.0651042 26.3672 0.195312C26.8229 0.325521 27.2591 0.520833 27.6758 0.78125C28.0924 1.04167 28.4635 1.34115 28.7891 1.67969C29.1146 2.01823 29.375 2.40885 29.5703 2.85156L37.0703 19.6094C37.1875 19.8698 37.2721 20.1367 37.3242 20.4102C37.3763 20.6836 37.4023 20.957 37.4023 21.2305C37.4023 21.543 37.3698 21.849 37.3047 22.1484C37.2396 22.4479 37.1289 22.7409 36.9727 23.0273L37.1289 22.8711L40 25.7227ZM15 37.5V21.25C15 20.5599 14.8698 19.9154 14.6094 19.3164C14.349 18.7174 13.9909 18.1836 13.5352 17.7148C13.0794 17.2461 12.5521 16.888 11.9531 16.6406C11.3542 16.3932 10.7031 16.263 10 16.25C9.3099 16.25 8.66536 16.3802 8.06641 16.6406C7.46745 16.901 6.93359 17.2591 6.46484 17.7148C5.99609 18.1706 5.63802 18.6979 5.39062 19.2969C5.14323 19.8958 5.01302 20.5469 5 21.25V37.5H15ZM12.5781 14.1992C13.3854 14.4987 14.1211 14.9219 14.7852 15.4688C15.4492 16.0156 16.0026 16.6602 16.4453 17.4023L26.7969 6.73828C27.2656 6.24349 27.5 5.66406 27.5 5C27.5 4.64844 27.4349 4.32292 27.3047 4.02344C27.1745 3.72396 26.9987 3.46354 26.7773 3.24219C26.556 3.02083 26.2891 2.83854 25.9766 2.69531C25.6641 2.55208 25.3385 2.48698 25 2.5C24.2839 2.5 23.6849 2.75391 23.2031 3.26172L12.5781 14.1992ZM29.082 7.87109C28.8477 8.2487 28.5612 8.59375 28.2227 8.90625C27.8841 9.21875 27.5586 9.53776 27.2461 9.86328L31.0938 18.4766L33.3789 17.5L29.082 7.87109ZM33.6914 22.5C34.069 22.5 34.3685 22.3763 34.5898 22.1289C34.8112 21.8815 34.9219 21.582 34.9219 21.2305C34.9219 20.9701 34.8633 20.7227 34.7461 20.4883C34.6289 20.2539 34.5117 20.0195 34.3945 19.7852L32.1094 20.7617C32.1875 20.957 32.2656 21.1589 32.3438 21.3672C32.4219 21.5755 32.5195 21.7643 32.6367 21.9336C32.7539 22.1029 32.8906 22.2396 33.0469 22.3438C33.2031 22.4479 33.418 22.5 33.6914 22.5ZM10 20C10.3516 20 10.6771 20.0651 10.9766 20.1953C11.276 20.3255 11.5365 20.5013 11.7578 20.7227C11.9792 20.944 12.1615 21.2109 12.3047 21.5234C12.4479 21.8359 12.513 22.1615 12.5 22.5C12.5 22.8516 12.4349 23.1771 12.3047 23.4766C12.1745 23.776 11.9987 24.0365 11.7773 24.2578C11.556 24.4792 11.2891 24.6615 10.9766 24.8047C10.6641 24.9479 10.3385 25.013 10 25C9.64844 25 9.32292 24.9349 9.02344 24.8047C8.72396 24.6745 8.46354 24.4987 8.24219 24.2773C8.02083 24.056 7.83854 23.7891 7.69531 23.4766C7.55208 23.1641 7.48698 22.8385 7.5 22.5C7.5 22.1484 7.5651 21.8229 7.69531 21.5234C7.82552 21.224 8.0013 20.9635 8.22266 20.7422C8.44401 20.5208 8.71094 20.3385 9.02344 20.1953C9.33594 20.0521 9.66146 19.987 10 20Z"
               fill="#FAFAFA"
@@ -61,7 +61,7 @@ function Industries({ mode }) {
     },
     {
       title: "Automobile",
-      desc: "Lorem Ipsum dolor amet",
+      desc: "Lorem ipsum dolor sit amet consectetur. Diam ipsum et nec augue fringilla donec egestas donec.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ function Industries({ mode }) {
     },
     {
       title: "Industrial Inspection",
-      desc: "Lorem Ipsum dolor amet",
+      desc: "Lorem ipsum dolor sit amet consectetur. Diam ipsum et nec augue fringilla donec egestas donec.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ function Industries({ mode }) {
     },
     {
       title: "Smart Infrastructure",
-      desc: "Lorem Ipsum dolor amet",
+      desc: "Lorem ipsum dolor sit amet consectetur. Diam ipsum et nec augue fringilla donec egestas donec.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +176,9 @@ function Industries({ mode }) {
       ) : (
         <div className="industries-header">
           <p className="industries-label">INDUSTRIES WE EMPOWER</p>
-          <h2 className="industries-title">Where Intelligence Creates Impact</h2>
+          <h2 className="industries-title">
+            Where Intelligence Creates Impact
+          </h2>
         </div>
       )}
       {isMetrics ? (
@@ -201,25 +203,15 @@ function Industries({ mode }) {
         </div>
       ) : (
         <div className="industries-grid">
-          <div className="industries-row">
-            {industries.slice(0, 3).map((item, index) => (
-              <div className="industries-card" key={index}>
-                <div className="industries-icon">{item.icon}</div>
+          {industries.map((item, index) => (
+            <div className="industries-card" key={index}>
+              <div className="industries-icon">{item.icon}</div>
+              <div className="industries-card-info">
                 <h3 className="industries-card-title">{item.title}</h3>
                 <p className="industries-card-desc">{item.desc}</p>
               </div>
-            ))}
-          </div>
-          <div className="industries-divider" />
-          <div className="industries-row industries-row-bottom">
-            {industries.slice(3).map((item, index) => (
-              <div className="industries-card" key={index}>
-                <div className="industries-icon">{item.icon}</div>
-                <h3 className="industries-card-title">{item.title}</h3>
-                <p className="industries-card-desc">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       )}
     </section>
