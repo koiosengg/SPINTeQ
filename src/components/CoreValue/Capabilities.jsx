@@ -10,15 +10,22 @@ const capabilities = [
     category: "Process",
     title: "Bringing Clarity to Operations",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nam sem in duis nibh parttitor sit sollicitudin sit maecenas.",
-    subTags: ["Workflow Design", "Operational Gap Analysis", "Process Optimization", "SOP Development", "Business Process Mapping"],
+      "Most organizations struggle with fragmented processes, disconnected systems, and limited visibility. We create a unified operational view that enables leaders to understand what is happening across the enterprise in real time, empowering faster and more informed decisions",
+    subTags: [
+      "Process Optimization",
+
+      "SOP Development",
+      "Workflow Design",
+      "Operational Gap Analysis",
+      "Business Process Mapping",
+    ],
     image: imgProcess,
   },
   {
     category: "Digitisation",
     title: "Turning Operations into Digital Systems",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nam sem in duis nibh parttitor sit sollicitudin sit maecenas.",
+      "Manual processes create delays, errors, and inefficiencies. We digitize workflows, standardize processes, and connect operations through intelligent platforms that ensure consistency, transparency, and scalability.",
     subTags: [
       "Digital Inspection & Reporting",
       "Data Capture Systems",
@@ -32,24 +39,42 @@ const capabilities = [
     category: "Automation",
     title: "Eliminating Repetitive Tasks",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nam sem in duis nibh parttitor sit sollicitudin sit maecenas.",
-    subTags: ["Workflow Design", "Operational Gap Analysis", "Process Optimization", "SOP Development", "Business Process Mapping"],
+      "Teams spend valuable time on routine activities that can be automated. Through workflow automation, AI, and intelligent orchestration, we reduce manual intervention and allow people to focus on higher-value work.",
+    subTags: [
+      "Workflow Design",
+      "Operational Gap Analysis",
+      "Process Optimization",
+      "SOP Development",
+      "Business Process Mapping",
+    ],
     image: imgAutomation,
   },
   {
     category: "Artificial Intelligence",
     title: "Transforming Data into Intelligence",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nam sem in duis nibh parttitor sit sollicitudin sit maecenas.",
-    subTags: ["Workflow Design", "Operational Gap Analysis", "Process Optimization", "SOP Development", "Business Process Mapping"],
+      "Organizations generate vast amounts of data every day. We convert operational data into actionable intelligence through analytics, dashboards, predictive insights, and AI-powered decision support systems.",
+    subTags: [
+      "Workflow Design",
+      "Operational Gap Analysis",
+      "Process Optimization",
+      "SOP Development",
+      "Business Process Mapping",
+    ],
     image: imgAI,
   },
   {
     category: "Autonomous Enterprise",
     title: "Future of Intelligent Organisations",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nam sem in duis nibh parttitor sit sollicitudin sit maecenas.",
-    subTags: ["Workflow Design", "Operational Gap Analysis", "Process Optimization", "SOP Development", "Business Process Mapping"],
+      "The future belongs to enterprises that can sense, learn, decide, and act in real time. SPINTeQ helps organizations evolve beyond digitization and automation toward autonomous operations powered by AI, Computer Vision, IoT, and intelligent systems.",
+    subTags: [
+      "Workflow Design",
+      "Operational Gap Analysis",
+      "Process Optimization",
+      "SOP Development",
+      "Business Process Mapping",
+    ],
     image: imgAutonomous,
   },
 ];

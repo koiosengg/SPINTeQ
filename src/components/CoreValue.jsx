@@ -4,7 +4,6 @@ import Transformation from "./CoreValue/Transformation";
 import Ecosystem from "./CoreValue/Ecosystem";
 import Capabilities from "./CoreValue/Capabilities";
 import ExploreSolutions from "./CoreValue/ExploreSolutions";
-
 import img12 from "../assets/CoreValue/Rectangle 12.png";
 import img13 from "../assets/CoreValue/Rectangle 13.png";
 
@@ -14,7 +13,6 @@ const CoreValue = () => {
       <Banner />
       <Transformation />
       <Capabilities />
-
       {/* Section 1: Explore Solutions (Standard Layout) */}
       <ExploreSolutions
         title={
@@ -26,7 +24,6 @@ const CoreValue = () => {
         image={img12}
         imageAlt="AI Solution Optimizer Dashboard"
       />
-
       <Ecosystem />
       {/* Section 2: Explore Solutions (Reversed Layout) */}
       <ExploreSolutions

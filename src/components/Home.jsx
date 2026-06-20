@@ -5,7 +5,6 @@ import Transformation from "./Home/Transformation";
 import Industries from "./Home/Industries";
 import System from "./Home/System";
 import Core from "./Home/Core";
-
 import ExploreSolutions from "./CoreValue/ExploreSolutions";
 import img12 from "../assets/CoreValue/Rectangle 12.png";
 import img13 from "../assets/CoreValue/Rectangle 13.png";
@@ -16,7 +15,7 @@ const Home = () => {
       <Banner />
       <Problem />
       <Transformation />
-      <Industries />
+      <Industries type="home" />
       {/* Section 1: Explore Solutions (Standard Layout) */}
       <ExploreSolutions
         title={

@@ -1,24 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const GetInTouch = () => {
+  const stats = [
+    { value: "2008", label: "Founded" },
+    { value: "15+", label: "Experience in Years" },
+    { value: "10+", label: "Industries Served" },
+    { value: "50K+", label: "Digital Users" },
+    { value: "10+", label: "Enterprise Customers" },
+  ];
+
   return (
     <section className="get-in-touch-section">
       <div className="get-in-touch-card">
-        <div className="get-in-touch-left">
-          <h2 className="get-in-touch-title">Lorem ipsum dolor amet</h2>
-          <p className="get-in-touch-desc">
-            Turn complexity into clarity. Let your systems think, act, and evolve.
-          </p>
-        </div>
-        <div className="get-in-touch-right">
-          <Link to="/contact" className="get-in-touch-btn">
-            Get in Touch
-          </Link>
-        </div>
+        {stats.map((stat, index) => (
+          <div className="about-stat-col" key={index}>
+            <div className="about-stat-value">{stat.value}</div>
+            <div className="about-stat-label">{stat.label}</div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
 export default GetInTouch;
+

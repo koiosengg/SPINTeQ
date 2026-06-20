@@ -10,13 +10,23 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import World from "./components/Home/World";
+import Testimonials from "./components/Testimonials";
 
 function ConditionalWorld() {
   const location = useLocation();
-  if (location.pathname === "/contact") {
+  if (location.pathname === "/contact" || location.pathname === "/solutions") {
     return null;
   }
   return <World />;
+}
+
+function ConditionalTestimonials() {
+  const location = useLocation();
+  const allowedPaths = ["/", "/about", "/core-value"];
+  if (allowedPaths.includes(location.pathname)) {
+    return <Testimonials />;
+  }
+  return null;
 }
 
 function App() {
@@ -36,9 +46,11 @@ function App() {
         </Route>
       </Routes>
       <ConditionalWorld />
+      <ConditionalTestimonials />
       <Footer />
     </BrowserRouter>
   );
 }
 
 export default App;
+

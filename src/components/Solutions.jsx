@@ -8,6 +8,7 @@ import ZoneOperations from "./Solutions/ZoneOperations";
 import Insight from "./Solutions/Insight";
 import Banner from "./Solutions/Banner";
 import TransformationSolution from "./Solutions/Transformation";
+import World from "./Home/World";
 
 const Solutions = () => {
   return (
@@ -20,6 +21,7 @@ const Solutions = () => {
       <TransformationSolution />
       <Growth />
       <ZoneOperations />
+      <World />
       <Insight />
     </>
   );

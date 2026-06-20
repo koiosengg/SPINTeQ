@@ -52,11 +52,8 @@ const Ecosystem = () => {
   return (
     <section className="ecosystem">
       <div className="ecosystem-header">
-        <h2 className="ecosystem-title">How we Build the Ecosystem</h2>
-        <p className="ecosystem-subtitle">
-          Lorem ipsum dolor sit amet consectetur. Nam sem in duis nibh porttitor
-          sit sollicitudin sit maecenas.
-        </p>
+        <span className="system-label">ECOSYSTEM</span>
+        <h2 className="ecosystem-title">How We Build The Ecosystem</h2>
       </div>
 
       <div className="ecosystem-visual">
