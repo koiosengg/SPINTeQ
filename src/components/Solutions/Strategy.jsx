@@ -23,10 +23,9 @@ const Strategy = () => {
   return (
     <section className="solutions-strategy">
       <div className="solutions-strategy-header">
-        <p className="solutions-strategy-label">Vantage WOS Strategic Assets</p>
-        <h2 className="solutions-strategy-title">
-          Information Failure,
-          <br />
+        <p className="problem-label">Vantage WOS Strategic Assets</p>
+        <h2 className="problem-title">
+          Information Failure, <br />
           Not A Technician Failure
         </h2>
       </div>

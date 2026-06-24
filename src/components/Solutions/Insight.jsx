@@ -7,10 +7,9 @@ const Insight = () => {
       <div className="solutions-insight-content">
         {/* Header */}
         <div className="solutions-insight-header">
-          <p className="solutions-insight-label">ONE BRAIN, EVERY INSIGHT</p>
-          <h2 className="solutions-insight-title">
-            The Architecture Of
-            <br />
+          <p className="problem-label">ONE BRAIN, EVERY INSIGHT</p>
+          <h2 className="problem-title">
+            The Architecture Of <br />
             Data-Driven Leadership
           </h2>
         </div>
@@ -27,21 +26,30 @@ const Insight = () => {
         {/* Pillars / Cards */}
         <div className="solutions-insight-pillars">
           <div className="solutions-insight-card solutions-growth-card">
-            <h3 className="solutions-growth-card-title">Pillar 1 : The 2X Scope</h3>
+            <h3 className="solutions-growth-card-title">
+              Pillar 1 : The 2X Scope
+            </h3>
             <p className="solutions-growth-card-desc">
-              Reclaiming the 40% Hidden Workshop by turning cost-heavy blind spots into revenue generating bays.
+              Reclaiming the 40% Hidden Workshop by turning cost-heavy blind
+              spots into revenue generating bays.
             </p>
           </div>
           <div className="solutions-insight-card solutions-growth-card">
-            <h3 className="solutions-growth-card-title">Pillar 2 : Information Velocity</h3>
+            <h3 className="solutions-growth-card-title">
+              Pillar 2 : Information Velocity
+            </h3>
             <p className="solutions-growth-card-desc">
-              Saving resource time on status chasing and manual data entry so the tam focuses 100% on vehicle throughput
+              Saving resource time on status chasing and manual data entry so
+              the tam focuses 100% on vehicle throughput
             </p>
           </div>
           <div className="solutions-growth-card solutions-insight-card">
-            <h3 className="solutions-growth-card-title">Pillar 3 : Data Driven Leadership</h3>
+            <h3 className="solutions-growth-card-title">
+              Pillar 3 : Data Driven Leadership
+            </h3>
             <p className="solutions-growth-card-desc">
-              Utilizing real-time Command Center dashboard identify bottlenecks before they break same day delivery targets.
+              Utilizing real-time Command Center dashboard identify bottlenecks
+              before they break same day delivery targets.
             </p>
           </div>
         </div>

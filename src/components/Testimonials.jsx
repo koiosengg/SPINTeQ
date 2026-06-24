@@ -63,8 +63,8 @@ const Testimonials = () => {
   return (
     <section className="testimonials">
       <div className="testimonials-header">
-        <span className="testimonials-label">TESTIMONIALS</span>
-        <h2 className="testimonials-title">What People Say About Us</h2>
+        <span className="problem-label">TESTIMONIALS</span>
+        <h2 className="problem-title">What People Say About Us</h2>
       </div>
       <div className="testimonials-grid">
         {visibleCards.map((item, index) => (

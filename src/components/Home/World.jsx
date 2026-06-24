@@ -1,10 +1,14 @@
 import StarBg from "../../assets/Home/World/world.png";
+import StarBgResp from "../../assets/Home/World/world-resp.png";
 
 function World() {
   return (
     <section className="world">
       <div className="world-bg">
-        <img src={StarBg} alt="Star Background" />
+        <picture>
+          <source media="(max-width: 768px)" srcSet={StarBgResp} />
+          <img src={StarBg} alt="Star Background" />
+        </picture>
       </div>
       <div className="world-content">
         <h2 className="world-heading">

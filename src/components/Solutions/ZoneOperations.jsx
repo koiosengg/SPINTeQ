@@ -85,10 +85,10 @@ const ZoneOperations = () => {
     <section className="solutions-zone">
       {/* Header */}
       <div className="solutions-zone-header">
-        <p className="solutions-zone-label">
+        <p className="problem-label">
           EVERY VEHICLE. EVERY PROCESS. EVERY SECOND.
         </p>
-        <h2 className="solutions-zone-title">
+        <h2 className="problem-title">
           Connected Operations,
           <br />
           Measurable Results

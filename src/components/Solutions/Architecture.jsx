@@ -21,8 +21,7 @@ const Architecture = () => {
             THE WAVE PLATFORM ARCHITECTURE
           </p>
           <h2 className="solutions-architecture-title">
-            Workflow Automation
-            <br />
+            Workflow Automation <br />
             For Visionary Enterprise
           </h2>
           <p className="solutions-architecture-desc">

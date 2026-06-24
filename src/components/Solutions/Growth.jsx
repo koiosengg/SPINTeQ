@@ -5,7 +5,7 @@ const Growth = () => {
   const cards = [
     {
       title: "Hidden Workshop",
-      desc: "Inside your current footprint, a \"Hidden Workshop\" is operating at a zero capacity.",
+      desc: 'Inside your current footprint, a "Hidden Workshop" is operating at a zero capacity.',
     },
     {
       title: "Revenue Light.",
@@ -20,10 +20,9 @@ const Growth = () => {
   return (
     <section className="solutions-growth">
       <div className="solutions-growth-header">
-        <p className="solutions-growth-label">TURNING IDLE ASSETS INTO GROWTH.</p>
-        <h2 className="solutions-growth-title">
-          You Are Currently Finding A 40%
-          <br />
+        <p className="problem-label">TURNING IDLE ASSETS INTO GROWTH.</p>
+        <h2 className="problem-title">
+          You Are Currently Finding A 40% <br />
           'Hidden Workshop' That Produce Zero Yield
         </h2>
       </div>

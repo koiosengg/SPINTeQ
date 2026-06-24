@@ -69,8 +69,8 @@ function System() {
   return (
     <section className="system">
       <div className="system-header">
-        <p className="system-label">SYSTEM LOGIC</p>
-        <h2 className="system-title">
+        <p className="problem-label">SYSTEM LOGIC</p>
+        <h2 className="problem-title">
           Systems continuously learn, improve, <br /> and optimize themselves.
         </h2>
       </div>

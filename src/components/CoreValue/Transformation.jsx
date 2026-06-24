@@ -136,7 +136,12 @@ const steps = [
           </linearGradient>
           <linearGradient
             id="paint3_linear_899_2512"
-            x1="38.5459" y1="4.67224" x2="38.5459" y2="35.0417" gradientUnits="userSpaceOnUse">
+            x1="38.5459"
+            y1="4.67224"
+            x2="38.5459"
+            y2="35.0417"
+            gradientUnits="userSpaceOnUse"
+          >
             <stop stopColor="#8C04BE" />
             <stop offset="1" stopColor="#3084A6" />
           </linearGradient>
@@ -269,8 +274,8 @@ const Transformation = () => (
     </svg>
 
     <div className="solutions-trans-header">
-      <p className="solutions-trans-label">TRANSFORMATION STEPS</p>
-      <h2 className="solutions-trans-title">Transformation Steps</h2>
+      <p className="problem-label">TRANSFORMATION STEPS</p>
+      <h2 className="problem-title">Transformation Steps</h2>
     </div>
 
     <div className="solutions-trans-steps">
@@ -351,4 +356,3 @@ const Transformation = () => (
 );
 
 export default Transformation;
-

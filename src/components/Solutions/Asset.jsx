@@ -27,7 +27,8 @@ const defaultTabs = [
   },
   {
     label: "Asset 02.",
-    subtitle: "Gap Discovery Analysis Pinpoints the Exact Cause of Idle Capacity.",
+    subtitle:
+      "Gap Discovery Analysis Pinpoints the Exact Cause of Idle Capacity.",
     points: [
       {
         title: "Tracking Intent",
@@ -48,7 +49,8 @@ const defaultTabs = [
   },
   {
     label: "Asset 03.",
-    subtitle: "The ROI Multiplier Proves that a 1% Utilization Gain Yields 2% Revenue Growth.",
+    subtitle:
+      "The ROI Multiplier Proves that a 1% Utilization Gain Yields 2% Revenue Growth.",
     points: [
       {
         title: "Decision Driver",
@@ -71,7 +73,12 @@ const defaultTabs = [
 
 const Asset = ({
   label = "TURNING IDLE ASSETS INTO GROWTH.",
-  title = <>Pinpointing Idle Capacity<br />To Multiply ROI And Revenue Growth</>,
+  title = (
+    <>
+      Pinpointing Idle Capacity <br />
+      To Multiply ROI And Revenue Growth
+    </>
+  ),
   tabs = defaultTabs,
   className = "",
 }) => {
@@ -82,10 +89,8 @@ const Asset = ({
     <section className={`solutions-asset ${className}`.trim()}>
       {/* Header */}
       <div className="solutions-asset-header">
-        <p className="solutions-asset-label">{label}</p>
-        <h2 className="solutions-asset-title">
-          {title}
-        </h2>
+        <p className="problem-label">{label}</p>
+        <h2 className="problem-title">{title}</h2>
       </div>
 
       {/* Tabs */}
@@ -104,7 +109,10 @@ const Asset = ({
       </div>
 
       {/* Content Panel */}
-      <div className="solutions-asset-panel solutions-asset-fade-in" key={activeIndex}>
+      <div
+        className="solutions-asset-panel solutions-asset-fade-in"
+        key={activeIndex}
+      >
         {/* Subtitle */}
         {active.subtitle && (
           <p className="solutions-asset-subtitle">{active.subtitle}</p>
@@ -127,12 +135,12 @@ const Asset = ({
             <img
               src={active.image}
               alt={active.imageAlt}
-              className={`solutions-asset-image ${
+              className={`solutions-asset-image image-tab-${activeIndex} ${
                 active.fit
                   ? `object-${active.fit}`
                   : activeIndex === 1
-                  ? "object-cover"
-                  : "object-contain"
+                    ? "object-cover"
+                    : "object-contain"
               }`}
             />
           </div>

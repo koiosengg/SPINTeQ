@@ -28,8 +28,8 @@ function Core({
   return (
     <section className="core">
       <div className="core-header">
-        <p className="core-label">{label}</p>
-        <h2 className="core-title">{title}</h2>
+        <p className="problem-label">{label}</p>
+        <h2 className="problem-title">{title}</h2>
       </div>
       <div className="core-grid">
         {items.map((item, index) => (

@@ -258,8 +258,8 @@ const SolutionCapabilities = () => {
   return (
     <section className="solutions-capabilities">
       <div className="solutions-capabilities-header">
-        <p className="solutions-capabilities-label">Solution Capabilities</p>
-        <h2 className="solutions-capabilities-title">Explore Our Solutions</h2>
+        <p className="problem-label">Solution Capabilities</p>
+        <h2 className="problem-title">Explore Our Solutions</h2>
       </div>
       <div className="solutions-capabilities-grid">
         {capabilitiesData.map((item) => (
