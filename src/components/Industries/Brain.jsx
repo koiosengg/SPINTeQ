@@ -5,8 +5,8 @@ function Brain() {
   return (
     <section className="ind-brain">
       <div className="ind-brain-header">
-        <p className="ind-brain-label">ONE BRAIN, EVERY INSIGHT</p>
-        <h2 className="ind-brain-heading">
+        <p className="problem-label">ONE BRAIN, EVERY INSIGHT</p>
+        <h2 className="problem-title">
           Omnipresent Intelligence. <br />
           Singular Control.
         </h2>

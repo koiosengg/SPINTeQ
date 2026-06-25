@@ -168,7 +168,7 @@ const Navbar = () => {
             Contact
           </NavLink>
           <div className="navbar-mobile-copyright">
-            ©2026All rights reserved
+            ©2026 All rights reserved
           </div>
         </div>
       </div>

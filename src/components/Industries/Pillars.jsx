@@ -191,12 +191,12 @@ function Pillars() {
       label="TURNING IDLE ASSETS INTO GROWTH."
       title={
         <>
-          The 7 Pillars Of
-          <br />
+          The 7 Pillars Of <br />
           Autonomous Operations
         </>
       }
       tabs={pillarTabs}
+      className="solutions-asset-pillars"
     />
   );
 }

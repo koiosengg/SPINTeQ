@@ -28,10 +28,14 @@ function Economics() {
   const [current, setCurrent] = useState(0);
 
   const isFirst = current === 0;
-  const isLast  = current === slides.length - 1;
+  const isLast = current === slides.length - 1;
 
-  const prev = () => { if (!isFirst) setCurrent((c) => c - 1); };
-  const next = () => { if (!isLast)  setCurrent((c) => c + 1); };
+  const prev = () => {
+    if (!isFirst) setCurrent((c) => c - 1);
+  };
+  const next = () => {
+    if (!isLast) setCurrent((c) => c + 1);
+  };
 
   const slide = slides[current];
 
@@ -39,10 +43,9 @@ function Economics() {
     <section className="ind-economics">
       {/* Header */}
       <div className="ind-economics-header">
-        <p className="ind-economics-label">SMARTER SPACE ECONOMICS</p>
-        <h2 className="ind-economics-title">
-          Unlocking ROI Through
-          <br />
+        <p className="problem-label">SMARTER SPACE ECONOMICS</p>
+        <h2 className="problem-title">
+          Unlocking ROI Through <br />
           Spatial Intelligence
         </h2>
       </div>
@@ -139,7 +142,7 @@ function Economics() {
           />
         </div>
       </div>
-      
+
       {/* Bottom Blur Overlay */}
       <div className="ind-economics-overlay"></div>
     </section>

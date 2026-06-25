@@ -51,8 +51,8 @@ const History = () => {
     <section className="about-history">
       <div className="about-history-container">
         <div className="about-history-header">
-          <span className="about-history-label">ABOUT SPINTEQ</span>
-          <h2 className="about-history-title">Building Smarter Enterprises.</h2>
+          <span className="problem-label">ABOUT SPINTEQ</span>
+          <h2 className="problem-title">Building Smarter Enterprises.</h2>
         </div>
 
         <div className="about-history-body">

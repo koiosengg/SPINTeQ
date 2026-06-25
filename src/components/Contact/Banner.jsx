@@ -115,8 +115,13 @@ const ContactBanner = () => {
             ref={circleRef}
             src={Circle}
             alt="Circle"
-            className="contact-banner-circle"
+            className="contact-banner-circle circle-left"
             onLoad={updateHeight}
+          />
+          <img
+            src={Circle}
+            alt="Circle"
+            className="contact-banner-circle circle-right"
           />
 
           <div className="solutions-banner-content">
