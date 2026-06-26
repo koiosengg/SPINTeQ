@@ -7670,6 +7670,7 @@ body.no-scroll {
   max-width: 1120px;
   box-sizing: border-box;
   margin: 0 auto;
+  margin-top: 64px;
   z-index: 3;
   position: relative;
   gap: 24px;
@@ -7684,7 +7685,7 @@ body.no-scroll {
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .new-footer-arc-div {
@@ -7694,7 +7695,7 @@ body.no-scroll {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .new-footer-arc-circle {
@@ -7711,10 +7712,9 @@ body.no-scroll {
 }
 
 .new-footer-watermark {
-  position: absolute;
-  top: 86px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  display: block;
+  margin-top: calc(5vw + 86px);
   white-space: nowrap;
   text-align: center;
   font-family: Inter, sans-serif;
@@ -7784,6 +7784,23 @@ body.no-scroll {
   line-height: normal;
 }
 
+.new-footer-credit-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    text-decoration 0.2s ease;
+}
+
+.new-footer-credit-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .new-footer-socials {
   display: flex;
   align-items: center;
@@ -7833,8 +7850,21 @@ body.no-scroll {
    ========================================================================== */
 
 @media screen and (max-width: 1200px) {
+  br:not(.mobile) {
+    display: none;
+  }
   .solutions-banner-subtitle br {
     display: none;
+  }
+  .new-footer-arc-circle g:nth-of-type(1) path {
+    stroke-width: 6px;
+  }
+  .new-footer-arc-circle g:nth-of-type(2) {
+    filter: url(#filter1_d_1416_1447_strong);
+  }
+  .new-footer-arc-circle g:nth-of-type(2) path {
+    stroke-width: 4px;
+    stroke: url(#paint1_linear_1416_1447_strong);
   }
   .cv-continuous-arc-desktop {
     display: none;
@@ -9007,6 +9037,7 @@ body.no-scroll {
   }
   .new-footer-bottom {
     gap: 32px;
+    margin-top: 48px;
   }
   .footer-legal-link {
     text-align: center;
@@ -9067,6 +9098,7 @@ body.no-scroll {
   .home-banner-heading-text h1 {
     font-size: 40px !important;
   }
+
   .solutions-banner-heading {
     text-align: center;
     font-family: Inter;
@@ -9079,6 +9111,9 @@ body.no-scroll {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .ind-banner .solutions-banner-heading br {
+    display: none;
   }
 
   .home-banner-subtitle,
@@ -9523,7 +9558,6 @@ body.no-scroll {
   }
   .new-footer-arc-circle {
     width: 100%;
-    top: 0;
   }
   .new-footer-watermark {
     text-align: center;
@@ -9541,7 +9575,8 @@ body.no-scroll {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    top: 60px;
+    margin-top: calc(100vw / 30 + 86px);
+    top: auto;
   }
   .solutions-banner-badge span {
     text-align: center;
@@ -9693,6 +9728,9 @@ body.no-scroll {
 }
 
 @media screen and (max-width: 768px) {
+  .new-footer-bottom {
+    margin-top: 32px;
+  }
   /* Shared Responsive Layout for all Banners */
   .home-banner .sbr-1,
   .core-value-banner .sbr-1,
@@ -10024,6 +10062,10 @@ body.no-scroll {
   .capability-right {
     width: 100%;
     justify-content: center;
+  }
+  .capability-right img {
+    height: auto;
+    width: 100%;
   }
   .capability-tag {
     font-size: 11px;
@@ -10508,7 +10550,6 @@ body.no-scroll {
 
   .new-footer-nav {
     justify-content: center;
-    padding: 0px;
   }
 
   .new-footer-nav-link {
@@ -10530,7 +10571,8 @@ body.no-scroll {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    top: 30px;
+    margin-top: calc(100vw / 30 + 53px);
+    top: auto;
   }
   .new-footer-bar {
     padding: 32px 0px 24px;

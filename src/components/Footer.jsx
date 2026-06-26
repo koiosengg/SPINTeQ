@@ -11,26 +11,156 @@ const NAV_LINKS = [
 ];
 
 /* ── Footer arc SVG ──────────────────────────────── */
-const ARC_PATH =
-  "M1695 975.5C1695 847.396 1669.77 720.545 1620.74 602.192C1571.72 483.839 1499.87 376.301 1409.28 285.717C1318.7 195.134 1211.16 123.279 1092.81 74.2555C974.455 25.232 847.604 -5.59962e-06 719.5 0C591.395 5.59963e-06 464.545 25.2321 346.192 74.2555C227.839 123.279 120.301 195.134 29.7173 285.717C-60.8663 376.301 -132.721 483.839 -181.745 602.192C-230.768 720.545 -256 847.396 -256 975.5H-248.616C-248.616 848.365 -223.575 722.475 -174.922 605.018C-126.27 487.561 -54.9592 380.837 34.9387 290.939C124.837 201.041 231.561 129.73 349.018 81.0776C466.475 32.4252 592.365 7.38416 719.5 7.38416C846.635 7.38415 972.525 32.4252 1089.98 81.0776C1207.44 129.73 1314.16 201.041 1404.06 290.939C1493.96 380.837 1565.27 487.561 1613.92 605.018C1662.57 722.475 1687.62 848.365 1687.62 975.5H1695Z";
-
 const FooterArc = ({ className }) => (
   <svg
     className={className}
     width="1440"
-    height="532"
-    viewBox="0 0 1440 532"
+    height="580"
+    viewBox="0 0 1440 580"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
+    <g filter="url(#filter0_d_1416_1447)">
+      <path
+        d="M1695 1023.5C1695 895.396 1669.77 768.545 1620.74 650.192C1571.72 531.839 1499.87 424.301 1409.28 333.717C1318.7 243.134 1211.16 171.279 1092.81 122.256C974.455 73.232 847.604 48 719.5 48C591.395 48 464.545 73.2321 346.192 122.256C227.839 171.279 120.301 243.134 29.7173 333.717C-60.8663 424.301 -132.721 531.839 -181.745 650.192C-230.768 768.545 -256 895.396 -256 1023.5"
+        stroke="url(#paint0_linear_1416_1447)"
+        strokeWidth="4"
+        fill="none"
+      />
+    </g>
+    <g filter="url(#filter1_d_1416_1447)">
+      <path
+        d="M1218.13 182.409C1066.99 93.6134 894.708 47.1863 719.412 48.0108C544.115 48.8353 372.28 96.8809 221.977 187.095"
+        stroke="url(#paint1_linear_1416_1447)"
+        strokeWidth="2"
+        fill="none"
+      />
+    </g>
     <defs>
+      <filter
+        id="filter0_d_1416_1447"
+        x="-260"
+        y="48"
+        width="1959"
+        height="983.5"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_1416_1447"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_1416_1447"
+          result="shape"
+        />
+      </filter>
+      <filter
+        id="filter1_d_1416_1447"
+        x="151.977"
+        y="0"
+        width="1136.16"
+        height="285.426"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feMorphology
+          radius="2.4"
+          operator="dilate"
+          in="SourceAlpha"
+          result="effect1_dropShadow_1416_1447"
+        />
+        <feOffset dy="0" />
+        <feGaussianBlur stdDeviation="6.4" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.682486 0 0 0 0 0.201923 0 0 0 0 1 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_1416_1447"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_1416_1447"
+          result="shape"
+        />
+      </filter>
+      <filter
+        id="filter1_d_1416_1447_strong"
+        x="151.977"
+        y="0"
+        width="1136.16"
+        height="285.426"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feMorphology
+          radius="4.8"
+          operator="dilate"
+          in="SourceAlpha"
+          result="effect1_dropShadow_1416_1447"
+        />
+        <feOffset dy="0" />
+        <feGaussianBlur stdDeviation="12" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.682486 0 0 0 0 0.201923 0 0 0 0 1 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_1416_1447"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_1416_1447"
+          result="shape"
+        />
+      </filter>
       <linearGradient
-        id="footer-arc-gradient"
+        id="paint0_linear_1416_1447"
         x1="26"
-        y1="959.5"
+        y1="1007.5"
         x2="1398.5"
-        y2="956.5"
+        y2="1004.5"
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#010101" />
@@ -39,9 +169,39 @@ const FooterArc = ({ className }) => (
         <stop offset="0.8" stopColor="#7404BE" />
         <stop offset="1" stopColor="#010101" />
       </linearGradient>
+      <linearGradient
+        id="paint1_linear_1416_1447"
+        x1="26"
+        y1="1007.5"
+        x2="1398.5"
+        y2="1004.5"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#010101" stopOpacity="0" />
+        <stop offset="0.25" stopColor="#010101" stopOpacity="0" />
+        <stop offset="0.38" stopColor="#7404BE" stopOpacity="1" />
+        <stop offset="0.487948" stopColor="white" stopOpacity="1" />
+        <stop offset="0.62" stopColor="#7404BE" stopOpacity="1" />
+        <stop offset="0.75" stopColor="#010101" stopOpacity="0" />
+        <stop offset="1" stopColor="#010101" stopOpacity="0" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_1416_1447_strong"
+        x1="26"
+        y1="1007.5"
+        x2="1398.5"
+        y2="1004.5"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#010101" stopOpacity="0" />
+        <stop offset="0.15" stopColor="#010101" stopOpacity="0" />
+        <stop offset="0.30" stopColor="#7404BE" stopOpacity="1" />
+        <stop offset="0.487948" stopColor="white" stopOpacity="1" />
+        <stop offset="0.70" stopColor="#7404BE" stopOpacity="1" />
+        <stop offset="0.85" stopColor="#010101" stopOpacity="0" />
+        <stop offset="1" stopColor="#010101" stopOpacity="0" />
+      </linearGradient>
     </defs>
-
-    <path d={ARC_PATH} fill="url(#footer-arc-gradient)" />
   </svg>
 );
 
@@ -112,12 +272,12 @@ function Footer() {
       <div className="new-footer-arc-container">
         <div className="new-footer-arc-div">
           <FooterArc className="new-footer-arc-circle" />
-
-          <span className="new-footer-watermark" aria-hidden="true">
-            SPINTeQ
-          </span>
         </div>
       </div>
+
+      <span className="new-footer-watermark" aria-hidden="true">
+        SPINTeQ
+      </span>
 
       <div className="new-footer-bottom">
         {/* ── Nav links ── */}
@@ -145,7 +305,17 @@ function Footer() {
             </a>
           </div>
 
-          <span className="new-footer-credit">Crafted by Koiostudio</span>
+          <span className="new-footer-credit">
+            Crafted by{" "}
+            <a
+              href="https://www.koiostudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="new-footer-credit-link"
+            >
+              Koiostudio
+            </a>
+          </span>
         </div>
       </div>
     </footer>
