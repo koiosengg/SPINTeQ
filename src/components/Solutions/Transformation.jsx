@@ -326,6 +326,7 @@ const TransformationSolution = () => {
         <svg
           className="sol-trans-continuous-arc-desktop"
           viewBox="-16 0 1154 232"
+          preserveAspectRatio="none"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >

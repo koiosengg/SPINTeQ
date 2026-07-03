@@ -52,8 +52,8 @@ const Ecosystem = () => {
   return (
     <section className="ecosystem">
       <div className="ecosystem-header">
-        <span className="capability-category">ECOSYSTEM</span>
-        <h2 className="capability-title">How We Build The Ecosystem</h2>
+        <span className="problem-label">ECOSYSTEM</span>
+        <h2 className="problem-title">How We Build The Ecosystem</h2>
       </div>
 
       <div className="ecosystem-visual">

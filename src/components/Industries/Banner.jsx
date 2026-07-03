@@ -33,7 +33,8 @@ function Banner() {
       const dt = Math.min((timestamp - lastTime) / 1000, 0.1);
       lastTime = timestamp;
       offset = (offset + SCROLL_SPEED * dt) % CELL;
-      const W = canvas.width, H = canvas.height;
+      const W = canvas.width,
+        H = canvas.height;
       ctx.clearRect(0, 0, W, H);
       const maxGY = (H * PERSP) / (cosA * PERSP + H * sinA);
       ctx.strokeStyle = "rgba(255, 255, 255, 0.18)";
@@ -85,11 +86,15 @@ function Banner() {
         </div>
         <div className="solutions-banner-text-group">
           <h1 className="solutions-banner-heading">
-            The Future Of Operations <br />
-            Starts Here
+            The Future Belongs to <br />
+            Autonomous Enterprises.
+            <br />
+            Is Your Enterprise Ready?
           </h1>
           <p className="solutions-banner-subtitle">
-            Transforming operations with intelligent automation and AI across sectors
+            SPINTeQ helps organizations transform operations through AI,
+            intelligent automation, and autonomous enterprise solutions -
+            building resilient, scalable, and future-ready businesses.
           </p>
         </div>
       </div>

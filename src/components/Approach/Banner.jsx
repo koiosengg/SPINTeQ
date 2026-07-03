@@ -33,7 +33,8 @@ function Banner() {
       const dt = Math.min((timestamp - lastTime) / 1000, 0.1);
       lastTime = timestamp;
       offset = (offset + SCROLL_SPEED * dt) % CELL;
-      const W = canvas.width, H = canvas.height;
+      const W = canvas.width,
+        H = canvas.height;
       ctx.clearRect(0, 0, W, H);
       const maxGY = (H * PERSP) / (cosA * PERSP + H * sinA);
       ctx.strokeStyle = "rgba(255, 255, 255, 0.18)";
@@ -65,7 +66,7 @@ function Banner() {
   }, []);
 
   return (
-    <section className="core-value-banner">
+    <section className="approach-banner">
       {/* ── Animated glow bg ── */}
       <div className="solutions-banner-rects">
         <div className="sbr sbr-1" />
@@ -81,12 +82,12 @@ function Banner() {
       {/* ── Content ── */}
       <div className="solutions-banner-content">
         <div className="solutions-banner-badge">
-          <span>Core Value</span>
+          <span>Approach</span>
         </div>
         <div className="solutions-banner-text-group">
           <h1 className="solutions-banner-heading">
-            Engineering <br />
-            Intelligent Transformation
+            Turning Video into <br />
+            Actionable Intelligence
           </h1>
           <p className="solutions-banner-subtitle">
             From fragmented operations to autonomous enterprises

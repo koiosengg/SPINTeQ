@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import StarBg from "../../assets/Home/World/world.png";
 import StarBgResp from "../../assets/Home/World/world-resp.png";
 
@@ -20,7 +21,14 @@ function World() {
           Partner with us to create intelligent, autonomous solutions that
           drive the next era of innovation.
         </p>
-        <button className="world-cta">Start Your Journey Today</button>
+        <Link
+          to="/contact"
+          className="world-cta"
+          style={{ textDecoration: "none" }}
+          aria-label="Start your journey today — contact us"
+        >
+          Start Your Journey Today
+        </Link>
       </div>
     </section>
   );

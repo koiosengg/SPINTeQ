@@ -41,10 +41,10 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   const links = [
-    { path: "/core-value", label: "Values" },
+    { path: "/approach", label: "Approach" },
     { path: "/solutions", label: "Solutions" },
     { path: "/industries", label: "Industries" },
-    { path: "/about", label: "About Us" },
+    { path: "/about", label: "About" },
   ];
 
   const toggleMenu = () => {

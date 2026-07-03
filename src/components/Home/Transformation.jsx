@@ -76,7 +76,7 @@ const Transformation = () => {
       <div className="transformation-card">
         <div className="transformation-left">
           <div className="transformation-icon">
-            <img src={fileIcon} alt="Vector" />
+            <img src={fileIcon} alt="Workflow diagram icon" />
           </div>
           <div className="transformation-text">
             <h3 className="transformation-subtitle">The Journey</h3>

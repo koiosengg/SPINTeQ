@@ -1,9 +1,9 @@
 import React from "react";
-import imgProcess from "../../assets/CoreValue/Capabilities/image 7.png";
-import imgDigitisation from "../../assets/CoreValue/Capabilities/image 8.png";
-import imgAutomation from "../../assets/CoreValue/Capabilities/image 9.png";
-import imgAI from "../../assets/CoreValue/Capabilities/image 10.png";
-import imgAutonomous from "../../assets/CoreValue/Capabilities/Rectangle 2.png";
+import imgProcess from "../../assets/Approach/Capabilities/image 7.png";
+import imgDigitisation from "../../assets/Approach/Capabilities/image 8.png";
+import imgAutomation from "../../assets/Approach/Capabilities/image 9.png";
+import imgAI from "../../assets/Approach/Capabilities/image 10.png";
+import imgAutonomous from "../../assets/Approach/Capabilities/Rectangle 2.png";
 
 const capabilities = [
   {
@@ -19,7 +19,7 @@ const capabilities = [
       "Operational Gap Analysis",
       "Business Process Mapping",
     ],
-    image: imgProcess,
+    image: imgAutonomous,
   },
   {
     category: "Digitisation",
@@ -33,21 +33,15 @@ const capabilities = [
       "Asset & Inventory Digitisation",
       "Digital Workflow Platforms",
     ],
-    image: imgDigitisation,
+    image: imgProcess,
   },
   {
     category: "Automation",
     title: "Eliminating Repetitive Tasks",
     description:
       "Teams spend valuable time on routine activities that can be automated. Through workflow automation, AI, and intelligent orchestration, we reduce manual intervention and allow people to focus on higher-value work.",
-    subTags: [
-      "Workflow Design",
-      "Operational Gap Analysis",
-      "Process Optimization",
-      "SOP Development",
-      "Business Process Mapping",
-    ],
-    image: imgAutomation,
+    subTags: ["Process Mapping", "Process Optimization"],
+    image: imgDigitisation,
   },
   {
     category: "Artificial Intelligence",
@@ -61,7 +55,7 @@ const capabilities = [
       "SOP Development",
       "Business Process Mapping",
     ],
-    image: imgAI,
+    image: imgAutomation,
   },
   {
     category: "Autonomous Enterprise",
@@ -69,13 +63,12 @@ const capabilities = [
     description:
       "The future belongs to enterprises that can sense, learn, decide, and act in real time. SPINTeQ helps organizations evolve beyond digitization and automation toward autonomous operations powered by AI, Computer Vision, IoT, and intelligent systems.",
     subTags: [
-      "Workflow Design",
-      "Operational Gap Analysis",
-      "Process Optimization",
-      "SOP Development",
-      "Business Process Mapping",
+      "Continuous Optimization",
+      "Automated Responses",
+      "AI Driven Engines",
+      "Self Monitoring Systems",
     ],
-    image: imgAutonomous,
+    image: imgAI,
   },
 ];
 
@@ -85,7 +78,7 @@ const Capabilities = () => (
       <div className="capability-card" key={i}>
         <div className="capability-left">
           <div className="capability-heading">
-            <span className="capability-category">{cap.category}</span>
+            <span className="problem-label">{cap.category}</span>
             <h3 className="capability-title">{cap.title}</h3>
           </div>
           <p className="capability-desc">{cap.description}</p>

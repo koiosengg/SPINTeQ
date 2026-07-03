@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import CoreValue from "./components/CoreValue";
+import Approach from "./components/Approach";
 import Industries from "./components/Industries";
 import Solutions from "./components/Solutions";
 import Contact from "./components/Contact";
@@ -11,6 +11,8 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import World from "./components/Home/World";
 import Testimonials from "./components/Testimonials";
+import NotFound from "./components/NotFound";
+import Marquee from "./components/Home/Marquee";
 
 function ConditionalWorld() {
   const location = useLocation();
@@ -20,9 +22,18 @@ function ConditionalWorld() {
   return <World />;
 }
 
+function ConditionalMarquee() {
+  const location = useLocation();
+  const allowedPaths = ["/", "/approach", "/about"];
+  if (allowedPaths.includes(location.pathname)) {
+    return <Marquee />;
+  }
+  return null;
+}
+
 function ConditionalTestimonials() {
   const location = useLocation();
-  const allowedPaths = ["/", "/about", "/core-value"];
+  const allowedPaths = ["/", "/about", "/approach"];
   if (allowedPaths.includes(location.pathname)) {
     return <Testimonials />;
   }
@@ -37,15 +48,16 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
-          <Route path="core-value" element={<CoreValue />} />
+          <Route path="approach" element={<Approach />} />
           <Route path="industries" element={<Industries />} />
           <Route path="solutions" element={<Solutions />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
       <ConditionalWorld />
+      <ConditionalMarquee />
       <ConditionalTestimonials />
       <Footer />
     </BrowserRouter>

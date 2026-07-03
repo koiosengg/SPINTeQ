@@ -142,16 +142,16 @@ const pillarTabs = [
         desc: "Scans for sleeping, mobile phone overuse, or checkout idleness to optimize resource allocation.",
       },
       {
-        title: "Transaction Integrity Engine",
-        desc: "Identifies checkout theft, unscanned cart items, and QR payment glitches to eliminate revenue shrinkage.",
+        title: "Detect Unscanned Item & Adding to Cart",
+        desc: "Potentially detecting unscanned items in cart, AI can prevent shrinkage in sales and send alerts.",
       },
       {
         title: "Predictive Shoplifting Analytics",
         desc: "Monitors behavioral micro-expressions and suspicious movements to pre-empt retail loss.",
       },
       {
-        title: "VIP & Blocklist Triggering",
-        desc: "Instant alerts for high-value customer arrivals or barred individual entries.",
+        title: "Detect Employee Fraud",
+        desc: "AI is empowered to detect checkout theft through video analytics reducing overall losses and improving store integrity.",
       },
     ],
     image: a6,

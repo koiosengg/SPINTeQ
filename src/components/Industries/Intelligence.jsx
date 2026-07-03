@@ -5,12 +5,10 @@ function Intelligence() {
   return (
     <section className="ind-intel">
       <div className="ind-intel-header">
-        <p className="problem-label">
-          INTELLIGENCE BEYOND SURVEILLANCE SYSTEMS
-        </p>
+        <p className="problem-label">Turning idle assets into growth.</p>
         <h2 className="problem-title  ">
-          From Passive Observation <br />
-          To Algorithmic Action
+          Turning Video into <br />
+          Actionable Intelligence
         </h2>
       </div>
 

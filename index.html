@@ -2,15 +2,89 @@
 <html lang="en">
 
 <head>
+  <!-- ✅ STEP 1: Charset always first -->
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/Logo.png" />
+
+  <!-- ✅ STEP 2: Viewport always second -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SPINTeQ</title>
+
+  <!-- ✅ STEP 3: GTM preconnect BEFORE the GTM script -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+  <!-- ✅ STEP 4: Google Tag Manager script placeholder -->
+  <!-- ================================================
+       GOOGLE TAG MANAGER — ADD WHEN CLIENT IS READY
+       Step 1: Preconnect link is already above this comment
+       Step 2: Paste GTM <script> here when container ID is provided
+       Step 3: Paste GTM <noscript> as first child of <body>
+       GTM Container ID format: GTM-XXXXXXX
+       ================================================ -->
+
+  <!-- ✅ STEP 5: Favicon -->
+  <link rel="icon" type="image/png" href="/Logo.png" />
+
+  <!-- ✅ STEP 6: Canonical URL (static fallback for home page) -->
+  <link rel="canonical" href="https://www.spinteq.in/" />
+
+  <!-- ✅ STEP 7: Title — keyword-rich, under 60 characters -->
+  <title>SPINTeQ — Architecting the Autonomous Enterprise</title>
+
+  <!-- ✅ STEP 8: Meta description — under 160 characters -->
+  <meta name="description" content="SPINTeQ helps organizations move from manual operations to intelligent, autonomous systems using AI, IoT, and intelligent automation." />
+
+  <!-- Extra settings preserved from original -->
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ✅ STEP 9: Open Graph tags (for social media sharing) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SPINTeQ" />
+  <meta property="og:title" content="SPINTeQ — Architecting the Autonomous Enterprise" />
+  <meta property="og:description" content="SPINTeQ helps organizations move from manual operations to intelligent, autonomous systems using AI, IoT, and intelligent automation." />
+  <meta property="og:url" content="https://www.spinteq.in/" />
+  <meta property="og:image" content="https://www.spinteq.in/Logo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SPINTeQ — Architecting the Autonomous Enterprise" />
+  <meta name="twitter:description" content="SPINTeQ helps organizations move from manual operations to intelligent, autonomous systems using AI, IoT, and intelligent automation." />
+  <meta name="twitter:image" content="https://www.spinteq.in/Logo.png" />
+
+  <!-- ✅ STEP 10: Font preconnects (always before font stylesheet) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- ✅ STEP 11: Stylesheet last in head -->
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <div id="root"></div>
+  <!-- GTM NOSCRIPT — ADD WHEN CLIENT IS READY
+       Paste the GTM <noscript> iframe tag here as the very 
+       first element inside <body> when the container ID is provided. -->
+  <div id="root">
+    <header style="padding:20px;text-align:center;font-family:sans-serif;">
+      <h1 style="color:#030f27;">SPINTeQ — Architecting the Autonomous Enterprise</h1>
+      <p>SPINTeQ helps organizations move from manual operations to intelligent, autonomous systems using AI, IoT, and intelligent automation.</p>
+    </header>
+    <main style="padding:20px;max-width:800px;margin:0 auto;font-family:sans-serif;">
+      <section>
+        <h2>Our Services</h2>
+        <ul>
+          <li><strong>AI Strategy &amp; Architecture:</strong> Comprehensive design for enterprise-scale AI implementation.</li>
+          <li><strong>Intelligent Automation &amp; IoT:</strong> Connecting operations and automating workflows with smart intelligence.</li>
+          <li><strong>Process Design &amp; Optimization:</strong> Streamlining systems to achieve peak operational efficiency and autonomous control.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Contact</h2>
+        <p><strong>Phone:</strong> 9876543210</p>
+        <p><strong>Email:</strong> info@spinteq.in</p>
+        <p><strong>Address:</strong> India</p>
+        <p><a href="/privacy-policy">Privacy Policy</a></p>
+      </section>
+    </main>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

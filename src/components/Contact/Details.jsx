@@ -32,8 +32,8 @@ const details = [
     ),
     title: "Mail Us",
     subtitle: "Speak to Our Friendly Team",
-    action: "info@spinteq.in",
-    href: "mailto:info@spinteq.in",
+    action: "info@spinteq.io",
+    href: "mailto:info@spinteq.io",
   },
   {
     id: "location",

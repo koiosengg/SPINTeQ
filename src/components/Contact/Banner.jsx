@@ -114,13 +114,15 @@ const ContactBanner = () => {
           <img
             ref={circleRef}
             src={Circle}
-            alt="Circle"
+            alt=""
+            role="presentation"
             className="contact-banner-circle circle-left"
             onLoad={updateHeight}
           />
           <img
             src={Circle}
-            alt="Circle"
+            alt=""
+            role="presentation"
             className="contact-banner-circle circle-right"
           />
 
@@ -179,7 +181,12 @@ const ContactBanner = () => {
                   required
                 />
               </div>
-              <button type="submit" className="contact-form-submit-button">
+              <button
+                type="submit"
+                name="submit-contact-form"
+                className="contact-form-submit-button"
+                aria-label="Submit contact form"
+              >
                 Submit
               </button>
             </div>

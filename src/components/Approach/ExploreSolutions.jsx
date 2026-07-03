@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ExploreSolutions = ({
   title,
@@ -17,9 +18,14 @@ const ExploreSolutions = ({
             <h2 className="explore-solutions-title">{title}</h2>
             <p className="explore-solutions-desc">{description}</p>
           </div>
-          <a href={btnHref} className="explore-solutions-btn">
+          <Link
+            to={btnHref}
+            className="explore-solutions-btn"
+            style={{ textDecoration: "none" }}
+            aria-label={`${btnText} — navigate to ${btnHref}`}
+          >
             {btnText}
-          </a>
+          </Link>
         </div>
         <div className="explore-solutions-img-col">
           <img src={image} alt={imageAlt} />

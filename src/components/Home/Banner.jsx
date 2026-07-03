@@ -95,8 +95,20 @@ function Banner() {
           </p>
         </div>
         <div className="home-banner-actions">
-          <button className="home-banner-btn-primary">Start Your Transformation</button>
-          <button className="home-banner-btn-secondary">See Our Solutions</button>
+          <a
+            href="/contact"
+            className="home-banner-btn-primary"
+            aria-label="Start your transformation journey — contact us"
+          >
+            Start Your Transformation
+          </a>
+          <a
+            href="/solutions"
+            className="home-banner-btn-secondary"
+            aria-label="See our intelligent solutions"
+          >
+            See Our Solutions
+          </a>
         </div>
       </div>
     </section>

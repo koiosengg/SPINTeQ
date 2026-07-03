@@ -8,8 +8,8 @@ const History = () => {
   const slides = [
     {
       img: img1,
-      title: "15 Years Of Expertiese",
-      desc: "For over 15 years, SPINTeQ has been helping organizations transform operations through digital innovation, workflow automation, and intelligent enterprise solutions. We partner with businesses across multiple industry verticals to simplify complexity, improve visibility, enhance productivity, and accelerate growth.",
+      title: "18 Years Of Expertiese",
+      desc: "For over 18 years, SPINTeQ has been helping organizations transform operations through digital innovation, workflow automation, and intelligent enterprise solutions. We partner with businesses across multiple industry verticals to simplify complexity, improve visibility, enhance productivity, and accelerate growth.",
     },
     {
       img: img2,
@@ -52,7 +52,12 @@ const History = () => {
       <div className="about-history-container">
         <div className="about-history-header">
           <span className="problem-label">ABOUT SPINTEQ</span>
-          <h2 className="problem-title">Building Smarter Enterprises.</h2>
+          <h2 className="about-overview-title">
+            <span className="title-gray">Building Smarter Enterprises,</span>
+            <br />
+            <span className="title-white">Architecting </span>
+            <span className="title-purple">Autonomous Enterprises.</span>
+          </h2>
         </div>
 
         <div className="about-history-body">

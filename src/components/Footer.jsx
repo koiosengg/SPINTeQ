@@ -1,7 +1,7 @@
 import React from "react";
 
 const NAV_LINKS = [
-  { label: "Values", href: "/core-value" },
+  { label: "Approach", href: "/approach" },
   { label: "Solutions", href: "/solutions" },
   { label: "Industries", href: "/industries" },
   { label: "About", href: "/about" },
@@ -217,8 +217,8 @@ const IconFacebook = () => (
     <path
       d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z"
       stroke="#8E8E8E"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -283,7 +283,12 @@ function Footer() {
         {/* ── Nav links ── */}
         <nav className="new-footer-nav" aria-label="Footer navigation">
           {NAV_LINKS.map((l) => (
-            <a key={l.label} href={l.href} className="new-footer-nav-link">
+            <a
+              key={l.label}
+              href={l.href}
+              className="new-footer-nav-link"
+              aria-label={`Navigate to ${l.label}`}
+            >
               {l.label}
             </a>
           ))}
