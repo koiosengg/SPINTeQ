@@ -71,7 +71,10 @@ const Transformation = () => {
     <section className="transformation">
       <div className="transformation-header">
         <span className="problem-label">TRANSFORMATION</span>
-        <h2 className="problem-title">A Clear Path to Autonomous Systems</h2>
+        <h2 className="problem-title">
+          A Clear Path to <br />
+          Autonomous Systems
+        </h2>
       </div>
       <div className="transformation-card">
         <div className="transformation-left">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const NAV_LINKS = [
   { label: "Approach", href: "/approach" },
@@ -266,8 +266,30 @@ const IconX = () => (
 );
 
 function Footer() {
+  const [inView, setInView] = useState(false);
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.05,
+      }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <footer className="new-footer">
+    <footer className="new-footer" ref={footerRef}>
       {/* ── Arc + watermark zone ── */}
       <div className="new-footer-arc-container">
         <div className="new-footer-arc-div">
@@ -275,9 +297,13 @@ function Footer() {
         </div>
       </div>
 
-      <span className="new-footer-watermark" aria-hidden="true">
+      <span
+        className={`new-footer-watermark ${inView ? "in-view" : ""}`}
+        aria-hidden="true"
+      >
         SPINTeQ
       </span>
+
 
       <div className="new-footer-bottom">
         {/* ── Nav links ── */}

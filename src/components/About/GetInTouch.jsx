@@ -77,7 +77,7 @@ const GetInTouch = () => {
     { value: "18+", label: "Experience in Years" },
     { value: "10+", label: "Industries Served" },
     { value: "50K+", label: "Digital Users" },
-    { value: "10+", label: "Enterprise Customers" },
+    { value: "65+", label: "Enterprise Customers" },
   ];
 
   return (

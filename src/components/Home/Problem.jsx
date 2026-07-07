@@ -196,7 +196,8 @@ const Problem = () => {
       <div className="problem-header">
         <span className="problem-label">PROBLEM</span>
         <h2 className="problem-title">
-          From Reactive Systems to Intelligent Operations
+          From Reactive Systems to <br />
+          Intelligent Operations
         </h2>
       </div>
       <div className="problem-cards">

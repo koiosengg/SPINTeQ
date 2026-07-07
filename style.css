@@ -290,6 +290,9 @@ body.no-scroll {
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
@@ -1756,6 +1759,9 @@ body.no-scroll {
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -2119,6 +2125,7 @@ body.no-scroll {
 .metric-card:hover .metric-value {
   background: linear-gradient(45deg, #64b1fe 0%, #f94cff 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1.05);
 }
@@ -3654,6 +3661,9 @@ body.no-scroll {
   padding: 1px;
   background: linear-gradient(90deg, #8c04be 0%, #00c2ff 100%);
   -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -7807,6 +7817,12 @@ body.no-scroll {
   pointer-events: none;
   z-index: 2;
   width: 100%;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.new-footer-watermark.in-view {
+  opacity: 1;
 }
 
 /* ── Nav links row ── */
@@ -8116,6 +8132,21 @@ body.no-scroll {
     display: block !important;
   }
 
+  /* Navbar Responsive Logos */
+  .navbar-logo {
+    gap: 6px;
+  }
+  .navbar-logo-1 {
+    width: 28px;
+    height: 28px;
+    aspect-ratio: 1/1;
+  }
+  .navbar-logo-2 {
+    width: 81.2px;
+    height: 24.182px;
+    aspect-ratio: 81.20/24.18;
+  }
+
   /* Navbar Responsive */
   .navbar-inner {
     justify-content: space-between;
@@ -8278,8 +8309,26 @@ body.no-scroll {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
   }
+
+  /* Client Marquee Responsive */
+  .client-marquee-section {
+    display: flex;
+    padding: 48px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+  }
+  .client-marquee-group {
+    gap: 8px 16px;
+  }
+  .client-marquee-logo {
+    width: 119px;
+    height: 64px;
+    flex-shrink: 0;
+    aspect-ratio: 119/64;
+  }
+
   .transformation {
     padding: 50px 20px;
     gap: 40px;
@@ -9814,7 +9863,20 @@ body.no-scroll {
     display: flex !important;
   }
   .cv-transformation-step-label {
-    display: none !important;
+    display: block !important;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 16px;
+    width: 100%;
+    margin-right: 0;
+  }
+  .approach-trans .sol-trans-step {
+    height: 180px !important;
+  }
+  .approach-trans .solutions-trans-steps {
+    transform: none !important;
+    margin-bottom: 0 !important;
   }
   .solutions-insight-pillars {
     gap: 8px;
