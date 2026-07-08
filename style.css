@@ -132,7 +132,7 @@ body.no-scroll {
 }
 
 .navbar-contact:hover {
-  background: linear-gradient(177deg, #8c04be 2.53%, #3084a6 101.13%);
+  background: linear-gradient(90deg, #8c04be 2.53%, #3084a6 101.13%);
   color: var(--White-Text, #fff);
 }
 
@@ -249,7 +249,7 @@ body.no-scroll {
 }
 
 .home-banner-btn-primary:hover {
-  background: linear-gradient(177deg, #8c04be 2.53%, #3084a6 101.13%);
+  background: linear-gradient(90deg, #8c04be 2.53%, #3084a6 101.13%);
   color: var(--White-Text, #fff);
 }
 
@@ -1339,12 +1339,17 @@ body.no-scroll {
 }
 
 .industries-card-desc {
-  color: var(--White-Text, #fff);
+  color: rgba(255, 255, 255, 0.54);
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  transition: color 0.3s ease;
+}
+
+.industries-card:hover .industries-card-desc {
+  color: #fff;
 }
 
 /* solutions-banner ::before removed — rects handle the glow composition */
@@ -6651,6 +6656,17 @@ body.no-scroll {
   line-height: normal;
 }
 
+.solutions-insight-pillars .solutions-growth-card-desc,
+.solutions-asset-points .solutions-growth-card-desc {
+  color: rgba(255, 255, 255, 0.54);
+  transition: color 0.3s ease;
+}
+
+.solutions-insight-pillars .solutions-growth-card:hover .solutions-growth-card-desc,
+.solutions-asset-points .solutions-growth-card:hover .solutions-growth-card-desc {
+  color: #fff;
+}
+
 .solutions-growth-visual {
   flex: 1;
   display: flex;
@@ -8741,7 +8757,7 @@ body.no-scroll {
     line-height: normal;
   }
   .industries-card-desc {
-    color: var(--White-Text, #fff);
+    color: rgba(255, 255, 255, 0.7);
     font-family: Inter;
     font-size: 14px;
     font-style: normal;

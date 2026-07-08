@@ -13,7 +13,7 @@ const Ecosystem = () => {
       orbitIndex: 2,
       angle: 175,
       labelPos: "left",
-      duration: 56,
+      duration: 40,
     },
     {
       id: "data",
@@ -21,7 +21,7 @@ const Ecosystem = () => {
       orbitIndex: 1,
       angle: 120,
       labelPos: "bottom",
-      duration: 32,
+      duration: 40,
     },
     {
       id: "monitoring",
@@ -37,7 +37,7 @@ const Ecosystem = () => {
       orbitIndex: 3,
       angle: 345,
       labelPos: "top",
-      duration: 48,
+      duration: 40,
     },
     {
       id: "ai",
@@ -45,7 +45,7 @@ const Ecosystem = () => {
       orbitIndex: 0,
       angle: 265,
       labelPos: "top",
-      duration: 24,
+      duration: 40,
     },
   ];
 
