@@ -1,0 +1,14 @@
+# SPINTeQ
+
+> Building Smarter, Autonomous Enterprises.
+
+SPINTeQ helps organizations transform operations through AI, digital transformation, and autonomous operations.
+
+## Core Navigation
+
+- [Home](https://www.spinteq.in/): SPINTeQ's main landing page, presenting its core value proposition, key clients, and general overview of autonomous enterprise transformation.
+- [About Us](https://www.spinteq.in/about): Detailed information on SPINTeQ's journey, founded in 2008, and its experience helping industries achieve digital transformation.
+- [Solutions](https://www.spinteq.in/solutions): In-depth look at SPINTeQ's technological stacks, growth architectures, and capabilities in operational optimization.
+- [Industries](https://www.spinteq.in/industries): Insights into the specific sectors served by SPINTeQ, including automotive, industrial engineering, and more.
+- [Approach](https://www.spinteq.in/approach): SPINTeQ's core methodologies, digital ecosystem integration, and transformation steps.
+- [Contact Us](https://www.spinteq.in/contact): Form and details to contact SPINTeQ for project inquiries, consultations, and support.
