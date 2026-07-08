@@ -8336,11 +8336,31 @@ body.no-scroll {
     gap: 48px;
   }
   .client-marquee-group {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 8px 16px;
+    width: 100%;
+    justify-items: center;
+  }
+  .client-marquee-group > :nth-child(1) {
+    grid-column: span 2;
+  }
+  .client-marquee-group > :nth-child(2) {
+    grid-column: span 2;
+  }
+  .client-marquee-group > :nth-child(3) {
+    grid-column: span 2;
+  }
+  .client-marquee-group > :nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .client-marquee-group > :nth-child(5) {
+    grid-column: 4 / span 2;
   }
   .client-marquee-logo {
-    width: 119px;
-    height: 64px;
+    max-width: 119px;
+    width: 100%;
+    height: auto;
     flex-shrink: 0;
     aspect-ratio: 119/64;
   }
@@ -8879,7 +8899,7 @@ body.no-scroll {
   .approach-banner {
     width: 100%;
     min-height: 100svh;
-    padding: 270px 20px 60px;
+    padding: 190px 20px 60px;
   }
   .build-header {
     gap: 12px;
@@ -9919,6 +9939,7 @@ body.no-scroll {
   }
   .new-footer {
     margin: 48px 0px 24px;
+    min-height: 385px;
   }
   .new-footer-arc-circle {
     width: 100%;
@@ -10684,10 +10705,7 @@ body.no-scroll {
 
   /* Solutions Banner Responsive */
   .solutions-banner {
-    padding: 270px 20px 60px;
-  }
-  .solutions-banner-heading {
-    max-width: 335px;
+    padding: 190px 20px 60px;
   }
   .solutions-banner-grid {
     top: 70%;
@@ -10944,7 +10962,7 @@ body.no-scroll {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: calc(100vw / 30 + 53px);
+    margin-top: calc(100vw / 30 + 40px);
     top: auto;
   }
   .new-footer-bar {

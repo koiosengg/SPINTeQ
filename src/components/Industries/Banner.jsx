@@ -87,9 +87,7 @@ function Banner() {
         <div className="solutions-banner-text-group">
           <h1 className="solutions-banner-heading">
             The Future Belongs to <br />
-            Autonomous Enterprises.
-            <br />
-            Is Your Enterprise Ready?
+            Autonomous Enterprises.<br /> Is Your Enterprise Ready?
           </h1>
           <p className="solutions-banner-subtitle">
             SPINTeQ helps organizations transform operations through AI,

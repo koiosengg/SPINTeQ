@@ -47,26 +47,32 @@ const GetInTouch = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          if (sectionRef.current) {
-            observer.unobserve(sectionRef.current);
+    let observer;
+    
+    // Delay observer setup to allow page layout to settle and prevent false intersection triggers on mount
+    const timer = setTimeout(() => {
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+            if (sectionRef.current && observer) {
+              observer.unobserve(sectionRef.current);
+            }
           }
-        }
-      },
-      {
-        threshold: 0.1,
-      },
-    );
+        },
+        {
+          threshold: 0.1,
+        },
+      );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+    }, 150);
 
     return () => {
-      if (sectionRef.current) {
+      clearTimeout(timer);
+      if (observer) {
         observer.disconnect();
       }
     };
