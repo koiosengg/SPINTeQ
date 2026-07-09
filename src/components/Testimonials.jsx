@@ -67,8 +67,11 @@ const Testimonials = () => {
         <h2 className="problem-title">What People Say About Us</h2>
       </div>
       <div className="testimonials-grid">
-        {visibleCards.map((item, index) => (
-          <div className="testimonial-card" key={index}>
+        {list.map((item, index) => (
+          <div
+            className={`testimonial-card${Math.floor(index / 3) === currentPage ? " active-page" : ""}`}
+            key={index}
+          >
             <div className="testimonial-quote-col">
               <span className="testimonial-quote-mark">
                 <svg

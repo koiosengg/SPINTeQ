@@ -2186,6 +2186,11 @@ body.no-scroll {
   margin-top: 64px;
 }
 
+/* Desktop: only show cards on the active page */
+.testimonial-card:not(.active-page) {
+  display: none;
+}
+
 .testimonial-card {
   flex: 1;
   display: flex;
@@ -7468,6 +7473,10 @@ body.no-scroll {
   gap: 8px;
 }
 
+.approach-trans .sol-trans-step-details {
+  display: none;
+}
+
 .sol-trans-step-phase {
   background: rgba(255, 255, 255, 0.06);
 
@@ -9914,6 +9923,16 @@ body.no-scroll {
     transform: none !important;
     margin-bottom: 0 !important;
   }
+  .approach-trans .cv-transformation-step-label {
+    display: none !important;
+  }
+  .approach-trans .sol-trans-step-details {
+    display: flex !important;
+  }
+  .approach-trans .sol-trans-step {
+    height: 297.981px !important;
+    gap: 0;
+  }
   .solutions-insight-pillars {
     gap: 8px;
   }
@@ -9960,7 +9979,7 @@ body.no-scroll {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: calc(100vw / 30 + 86px);
+    margin-top: calc(100vw / 30 + 55px);
     top: auto;
   }
   .solutions-banner-badge span {
@@ -10702,6 +10721,10 @@ body.no-scroll {
   .testimonials-navigation {
     display: none;
   }
+  /* Mobile: show all 9 cards in horizontal scroll */
+  .testimonial-card:not(.active-page) {
+    display: flex;
+  }
 
   /* Solutions Banner Responsive */
   .solutions-banner {
@@ -10866,39 +10889,35 @@ body.no-scroll {
   }
   .solutions-asset-image-wrap {
     display: flex;
-    width: 335px;
-    height: 208px;
-    padding: 0 64.651px 0 64px;
+    width: 100%;
+    max-width: 450px;
+    height: 260px;
+    padding: 0;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
   }
-  .solutions-asset-image.object-contain {
-    width: 206.349px;
-    height: 208px;
-    flex-shrink: 0;
-    object-fit: contain;
-    transform: rotate(90deg);
-  }
   .solutions-asset-image {
-    transform: rotate(90deg);
-  }
-  .solutions-asset-image.image-tab-1,
-  .solutions-asset-image.image-tab-2 {
+    width: 100% !important;
+    height: 100% !important;
     transform: rotate(0deg) !important;
   }
-  .solutions-asset-pillars .solutions-asset-image.image-tab-0,
-  .solutions-asset-pillars .solutions-asset-image.image-tab-3,
-  .solutions-asset-pillars .solutions-asset-image.image-tab-4,
-  .solutions-asset-pillars .solutions-asset-image.image-tab-5,
-  .solutions-asset-pillars .solutions-asset-image.image-tab-6 {
-    transform: rotate(0deg) !important;
+  
+  /* For the rotated image: Solutions tab 0 */
+  .solutions-asset-image-wrap.wrap-tab-0:not(.solutions-asset-pillars *) {
+    width: 220px;
+    height: 360px;
+    padding: 0;
+  }
+  .solutions-asset-image-wrap.wrap-tab-0:not(.solutions-asset-pillars *) .solutions-asset-image {
+    width: 360px !important;
+    height: 220px !important;
+    transform: rotate(90deg) !important;
   }
 
   .solutions-trans-steps {
-    transform: scale(0.85);
-    transform-origin: center top;
-    margin-bottom: -100px;
+    transform: none;
+    margin-bottom: 0;
   }
 
   .solutions-zone {

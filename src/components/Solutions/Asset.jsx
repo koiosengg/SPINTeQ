@@ -131,7 +131,7 @@ const Asset = ({
           </div>
 
           {/* Right – image */}
-          <div className="solutions-asset-image-wrap">
+          <div className={`solutions-asset-image-wrap wrap-tab-${activeIndex}`}>
             <img
               src={active.image}
               alt={active.imageAlt}

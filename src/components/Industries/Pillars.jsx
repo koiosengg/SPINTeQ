@@ -156,7 +156,7 @@ const pillarTabs = [
     ],
     image: a6,
     imageAlt: "Operational Integrity – Process compliance dashboard",
-    fit: "contain",
+    fit: "cover",
   },
   {
     label: "Specialized Threat Detection",

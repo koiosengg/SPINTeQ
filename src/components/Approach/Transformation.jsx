@@ -3,6 +3,9 @@ import React from "react";
 const steps = [
   {
     label: "Process",
+    phase: "Phase 1",
+    title: "Workflow Assessment & Design",
+    desc: "Sites Surveys, Camera Layouts, defining Workflow paths",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +36,9 @@ const steps = [
   },
   {
     label: "Digitisation",
+    phase: "Phase 2",
+    title: "Remote Camera View",
+    desc: "Remote configuring AI server and training workshop vision using live feed from site.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +74,9 @@ const steps = [
   },
   {
     label: "Automation",
+    phase: "Phase 3",
+    title: "On-Premise AI Server",
+    desc: "On Prime Server installation and application development and training",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -151,6 +160,9 @@ const steps = [
   },
   {
     label: "AI",
+    phase: "Phase 4",
+    title: "Analytics & Optimization",
+    desc: "Leveraging bottleneck heat map and workflow optimising",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -183,6 +195,9 @@ const steps = [
   },
   {
     label: "Autonomous\n Enterprise",
+    phase: "Phase 5",
+    title: "Full Automation",
+    desc: "Activating full scale solution and management dashboard, workshop vision live",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +231,7 @@ const steps = [
 ];
 
 const Transformation = () => (
-  <section className="solutions-trans">
+  <section className="solutions-trans approach-trans">
     {/* Linear Gradients Definition */}
     <svg width="0" height="0" style={{ position: "absolute" }}>
       <defs>
@@ -274,8 +289,8 @@ const Transformation = () => (
     </svg>
 
     <div className="solutions-trans-header">
-      <p className="problem-label">TRANSFORMATION STEPS</p>
-      <h2 className="problem-title">Transformation Steps</h2>
+      <p className="solutions-trans-label">TRANSFORMATION STEPS</p>
+      <h2 className="solutions-trans-title">Transformation Steps</h2>
     </div>
 
     <div className="solutions-trans-steps">
@@ -338,6 +353,12 @@ const Transformation = () => (
               </svg>
 
               <div className="sol-trans-step-inner">{step.icon}</div>
+            </div>
+
+            <div className="sol-trans-step-details">
+              <span className="sol-trans-step-phase">{step.phase}</span>
+              <h3 className="sol-trans-step-title">{step.title}</h3>
+              <p className="sol-trans-step-desc">{step.desc}</p>
             </div>
 
             <span className="cv-transformation-step-label">
