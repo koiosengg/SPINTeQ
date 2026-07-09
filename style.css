@@ -10903,16 +10903,15 @@ body.no-scroll {
     transform: rotate(0deg) !important;
   }
   
-  /* For the rotated image: Solutions tab 0 */
-  .solutions-asset-image-wrap.wrap-tab-0:not(.solutions-asset-pillars *) {
-    width: 220px;
-    height: 360px;
+  /* Asset 01 (tab 0) — landscape, no rotation */
+  .solutions-asset-image-wrap.wrap-tab-0 {
+    width: 100%;
+    max-width: 450px;
+    height: 200px;
     padding: 0;
   }
-  .solutions-asset-image-wrap.wrap-tab-0:not(.solutions-asset-pillars *) .solutions-asset-image {
-    width: 360px !important;
-    height: 220px !important;
-    transform: rotate(90deg) !important;
+  .solutions-asset-image-wrap.wrap-tab-0 .solutions-asset-image {
+    object-fit: contain;
   }
 
   .solutions-trans-steps {
