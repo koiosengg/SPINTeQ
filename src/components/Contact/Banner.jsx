@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useTheme } from "../../context/ThemeContext";
 import Circle from "../../assets/Home/Banner/Circle.png";
 
 const CELL = 120;
@@ -17,6 +18,7 @@ const ContactBanner = () => {
   const circleRef = useRef(null);
   const canvasRef = useRef(null);
   const [containerHeight, setContainerHeight] = useState(null);
+  const { isDark } = useTheme();
 
   const updateHeight = () => {
     if (!circleRef.current) return;
@@ -62,7 +64,7 @@ const ContactBanner = () => {
         H = canvas.height;
       ctx.clearRect(0, 0, W, H);
       const maxGY = (H * PERSP) / (cosA * PERSP + H * sinA);
-      ctx.strokeStyle = "rgba(255, 255, 255, 0.18)";
+      ctx.strokeStyle = isDark ? "rgba(255, 255, 255, 0.18)" : "rgba(0, 0, 0, 0.12)";
       ctx.lineWidth = 1;
       ctx.beginPath();
       const numRows = Math.ceil(maxGY / CELL) + 2;
@@ -89,7 +91,7 @@ const ContactBanner = () => {
       cancelAnimationFrame(animId);
       ro.disconnect();
     };
-  }, []);
+  }, [isDark]);
 
   return (
     <section className="contact-banner">

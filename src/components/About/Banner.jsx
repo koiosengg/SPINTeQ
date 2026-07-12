@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useTheme } from "../../context/ThemeContext";
 
 const CELL = 120;
 const PERSP = 800;
@@ -14,6 +15,7 @@ function project(gx, gy, W) {
 
 const Banner = () => {
   const canvasRef = useRef(null);
+  const { isDark } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -37,7 +39,7 @@ const Banner = () => {
         H = canvas.height;
       ctx.clearRect(0, 0, W, H);
       const maxGY = (H * PERSP) / (cosA * PERSP + H * sinA);
-      ctx.strokeStyle = "rgba(255, 255, 255, 0.18)";
+      ctx.strokeStyle = isDark ? "rgba(255, 255, 255, 0.18)" : "rgba(0, 0, 0, 0.12)";
       ctx.lineWidth = 1;
       ctx.beginPath();
       const numRows = Math.ceil(maxGY / CELL) + 2;
@@ -63,7 +65,7 @@ const Banner = () => {
       cancelAnimationFrame(animId);
       ro.disconnect();
     };
-  }, []);
+  }, [isDark]);
 
   return (
     <section className="about-banner">

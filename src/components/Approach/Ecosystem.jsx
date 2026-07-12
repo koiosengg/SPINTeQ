@@ -1,7 +1,9 @@
 import React from "react";
-import logoImg from "../../assets/Footer/Logo.png";
+import { useTheme } from "../../context/ThemeContext";
+import logoImg from "../../assets/Footer/Logo copy.png";
 
 const Ecosystem = () => {
+  const { isDark } = useTheme();
   const orbitSizes = [
     260.684, 363.321, 496.51, 640.802, 811.165, 938.57, 1049.099, 1187.88,
   ];

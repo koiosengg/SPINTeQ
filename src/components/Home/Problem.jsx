@@ -1,6 +1,9 @@
 import React from "react";
+import { useTheme } from "../../context/ThemeContext";
 import CardGrid1 from "../../assets/Home/Banner/card-gridline.png";
+import CardGrid1Light from "../../assets/Home/Banner/card-gridline-light.png";
 import CardGrid2 from "../../assets/Home/Banner/card-gridline1.png";
+import CardGrid2Light from "../../assets/Home/Banner/card-gridline1-light.png";
 
 /* ── Card 1: 4 dots converging toward the center ball ── */
 const ConvergingDots = () => {
@@ -191,6 +194,10 @@ const OrbitingPlanets = () => {
 };
 
 const Problem = () => {
+  const { isDark } = useTheme();
+  const cardGrid1Img = isDark ? CardGrid1 : CardGrid1Light;
+  const cardGrid2Img = isDark ? CardGrid2 : CardGrid2Light;
+
   return (
     <section className="problem">
       <div className="problem-header">
@@ -204,7 +211,7 @@ const Problem = () => {
         <div className="problem-card">
           <div
             className="problem-card-img"
-            style={{ backgroundImage: `url(${CardGrid1})` }}
+            style={{ backgroundImage: `url(${cardGrid1Img})` }}
           >
             <ConvergingDots />
           </div>
@@ -219,7 +226,7 @@ const Problem = () => {
         <div className="problem-card">
           <div
             className="problem-card-img"
-            style={{ backgroundImage: `url(${CardGrid2})` }}
+            style={{ backgroundImage: `url(${cardGrid2Img})` }}
           >
             <OrbitingPlanets />
           </div>

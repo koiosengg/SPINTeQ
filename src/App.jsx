@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -42,25 +43,27 @@ function ConditionalTestimonials() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Navbar />
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-          <Route path="approach" element={<Approach />} />
-          <Route path="industries" element={<Industries />} />
-          <Route path="solutions" element={<Solutions />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-      <ConditionalWorld />
-      <ConditionalMarquee />
-      <ConditionalTestimonials />
-      <Footer />
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="approach" element={<Approach />} />
+            <Route path="industries" element={<Industries />} />
+            <Route path="solutions" element={<Solutions />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+        <ConditionalWorld />
+        <ConditionalMarquee />
+        <ConditionalTestimonials />
+        <Footer />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

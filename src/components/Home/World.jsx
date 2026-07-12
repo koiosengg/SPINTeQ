@@ -1,14 +1,24 @@
 import { Link } from "react-router-dom";
+import { useTheme } from "../../context/ThemeContext";
 import StarBg from "../../assets/Home/World/world.png";
 import StarBgResp from "../../assets/Home/World/world-resp.png";
+import StarBgLight from "../../assets/Home/World/world-light.png";
 
 function World() {
+  const { isDark } = useTheme();
+
   return (
     <section className="world">
       <div className="world-bg">
         <picture>
-          <source media="(max-width: 768px)" srcSet={StarBgResp} />
-          <img src={StarBg} alt="Star Background" />
+          {isDark ? (
+            <>
+              <source media="(max-width: 768px)" srcSet={StarBgResp} />
+              <img src={StarBg} alt="Star Background" />
+            </>
+          ) : (
+            <img src={StarBgLight} alt="Star Background" />
+          )}
         </picture>
       </div>
       <div className="world-content">
