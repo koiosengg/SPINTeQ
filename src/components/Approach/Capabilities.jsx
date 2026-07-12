@@ -1,13 +1,10 @@
 import React from "react";
-import { useTheme } from "../../context/ThemeContext";
 import imgProcess from "../../assets/Approach/Capabilities/image 7.png";
-import imgProcessLight from "../../assets/Approach/Capabilities/image 7-light.png";
 import imgDigitisation from "../../assets/Approach/Capabilities/image 8.png";
-import imgDigitisationLight from "../../assets/Approach/Capabilities/image 8-light.png";
 import imgAutomation from "../../assets/Approach/Capabilities/image 9.png";
 import imgAI from "../../assets/Approach/Capabilities/image 10.png";
-import imgAILight from "../../assets/Approach/Capabilities/image 10-light.png";
 import imgAutonomous from "../../assets/Approach/Capabilities/Rectangle 2.png";
+
 
 const capabilities = [
   {
@@ -38,7 +35,6 @@ const capabilities = [
       "Digital Workflow Platforms",
     ],
     image: imgProcess,
-    imageLight: imgProcessLight,
   },
   {
     category: "Automation",
@@ -47,7 +43,6 @@ const capabilities = [
       "Teams spend valuable time on routine activities that can be automated. Through workflow automation, AI, and intelligent orchestration, we reduce manual intervention and allow people to focus on higher-value work.",
     subTags: ["Process Mapping", "Process Optimization"],
     image: imgDigitisation,
-    imageLight: imgDigitisationLight,
   },
   {
     category: "Artificial Intelligence",
@@ -75,17 +70,13 @@ const capabilities = [
       "Self Monitoring Systems",
     ],
     image: imgAI,
-    imageLight: imgAILight,
   },
 ];
 
 const Capabilities = () => {
-  const { isDark } = useTheme();
-
   return (
     <section className="capabilities">
       {capabilities.map((cap, i) => {
-        const displayImage = !isDark && cap.imageLight ? cap.imageLight : cap.image;
         return (
           <div className="capability-card" key={i}>
             <div className="capability-left">
@@ -103,7 +94,7 @@ const Capabilities = () => {
               </div>
             </div>
             <div className="capability-right">
-              <img src={displayImage} alt={cap.title} />
+              <img src={cap.image} alt={cap.title} />
             </div>
           </div>
         );

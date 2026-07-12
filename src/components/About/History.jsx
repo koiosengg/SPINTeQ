@@ -1,17 +1,13 @@
 import React, { useState } from "react";
-import { useTheme } from "../../context/ThemeContext";
 import img1Dark from "../../assets/About/Img1.png";
-import img1Light from "../../assets/About/img1-light.png";
 import img2 from "../../assets/About/Img2.png";
 import img3 from "../../assets/About/Img3.png";
 import img4 from "../../assets/About/Img4.png";
 
 const History = () => {
-  const { isDark } = useTheme();
-
   const slides = [
     {
-      img: isDark ? img1Dark : img1Light,
+      img: img1Dark,
       title: "18 Years Of Expertiese",
       desc: "For over 18 years, SPINTeQ has been helping organizations transform operations through digital innovation, workflow automation, and intelligent enterprise solutions. We partner with businesses across multiple industry verticals to simplify complexity, improve visibility, enhance productivity, and accelerate growth.",
     },
