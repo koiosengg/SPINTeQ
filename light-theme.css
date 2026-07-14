@@ -126,7 +126,9 @@
   .problem-card {
     background: rgba(238, 238, 238, 0.75);
   }
-
+  .problem-card-img {
+    border-radius: 12px 12px 0px 0px;
+  }
   .transformation-card {
     background: linear-gradient(
       96deg,
@@ -581,7 +583,9 @@
   .solutions-insight {
     background: var(--bg-primary);
   }
-
+  .solutions-insight-image {
+    object-fit: cover;
+  }
   .solutions-insight-title {
     color: #0d0d0d;
   }

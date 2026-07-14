@@ -7,7 +7,9 @@ import Industries from "./Home/Industries";
 import GetInTouch from "./About/GetInTouch";
 import ExploreSolutions from "./Approach/ExploreSolutions";
 import img12 from "../assets/Approach/Rectangle 12.png";
+import img12Light from "../assets/Approach/Rectangle 12 light.png";
 import img13 from "../assets/Approach/Rectangle 13.png";
+import img13Light from "../assets/Approach/Rectangle 13 light.png";
 import Ecosystem from "./Approach/Ecosystem";
 import { AboutPageStructuredData } from "../structured-data/index.jsx";
 
@@ -48,6 +50,7 @@ const About = () => {
         }
         description="Explore intelligent solutions designed to solve complex operational challenges."
         image={img12}
+        lightImage={img12Light}
         imageAlt="AI Solution Optimizer Dashboard"
         btnHref="/solutions"
       />
@@ -63,6 +66,7 @@ const About = () => {
         }
         description="See how AI transforms safety, efficiency, and operational performance."
         image={img13}
+        lightImage={img13Light}
         imageAlt="Seven Pillars of Autonomous Operations Diagram"
         btnHref="/industries"
       />

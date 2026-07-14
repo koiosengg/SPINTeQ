@@ -1,7 +1,12 @@
 import React from "react";
 import insightBg from "../../assets/Solutions/Insight.png";
+import insightBgLight from "../../assets/Solutions/Insight-light.png";
+import { useTheme } from "../../context/ThemeContext";
 
 const Insight = () => {
+  const { isDark } = useTheme();
+  const displayedImage = isDark ? insightBg : insightBgLight;
+
   return (
     <section className="solutions-insight">
       <div className="solutions-insight-content">
@@ -17,7 +22,7 @@ const Insight = () => {
         {/* Central Graphic */}
         <div className="solutions-insight-image-wrap">
           <img
-            src={insightBg}
+            src={displayedImage}
             alt="Insight Architecture"
             className="solutions-insight-image"
           />

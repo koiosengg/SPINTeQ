@@ -1,17 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { useTheme } from "../../context/ThemeContext";
 
 const ExploreSolutions = ({
   title,
   description,
   image,
+  lightImage,
   imageAlt,
   reverse = false,
   btnText = "Explore Now",
   btnHref = "/solutions",
 }) => {
-
+  const { isDark } = useTheme();
+  const displayedImage = !isDark && lightImage ? lightImage : image;
 
   return (
     <section className={`explore-solutions ${reverse ? "reverse-section" : ""}`}>
@@ -31,7 +33,7 @@ const ExploreSolutions = ({
           </Link>
         </div>
         <div className="explore-solutions-img-col">
-          <img src={image} alt={imageAlt} />
+          <img src={displayedImage} alt={imageAlt} />
         </div>
       </div>
     </section>

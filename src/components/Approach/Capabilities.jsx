@@ -1,10 +1,15 @@
 import React from "react";
 import imgProcess from "../../assets/Approach/Capabilities/image 7.png";
+import imgProcessLight from "../../assets/Approach/Capabilities/image 7-light.png";
 import imgDigitisation from "../../assets/Approach/Capabilities/image 8.png";
+import imgDigitisationLight from "../../assets/Approach/Capabilities/image 8-light.png";
 import imgAutomation from "../../assets/Approach/Capabilities/image 9.png";
+import imgAutomationLight from "../../assets/Approach/Capabilities/image 9-light.png";
 import imgAI from "../../assets/Approach/Capabilities/image 10.png";
+import imgAILight from "../../assets/Approach/Capabilities/image 10-light.png";
 import imgAutonomous from "../../assets/Approach/Capabilities/Rectangle 2.png";
-
+import imgAutonomousLight from "../../assets/Approach/Capabilities/Rectangle 2-light.png";
+import { useTheme } from "../../context/ThemeContext";
 
 const capabilities = [
   {
@@ -14,13 +19,13 @@ const capabilities = [
       "Most organizations struggle with fragmented processes, disconnected systems, and limited visibility. We create a unified operational view that enables leaders to understand what is happening across the enterprise in real time, empowering faster and more informed decisions",
     subTags: [
       "Process Optimization",
-
       "SOP Development",
       "Workflow Design",
       "Operational Gap Analysis",
       "Business Process Mapping",
     ],
     image: imgAutonomous,
+    lightImage: imgAutonomousLight,
   },
   {
     category: "Digitisation",
@@ -35,6 +40,7 @@ const capabilities = [
       "Digital Workflow Platforms",
     ],
     image: imgProcess,
+    lightImage: imgProcessLight,
   },
   {
     category: "Automation",
@@ -43,6 +49,7 @@ const capabilities = [
       "Teams spend valuable time on routine activities that can be automated. Through workflow automation, AI, and intelligent orchestration, we reduce manual intervention and allow people to focus on higher-value work.",
     subTags: ["Process Mapping", "Process Optimization"],
     image: imgDigitisation,
+    lightImage: imgDigitisationLight,
   },
   {
     category: "Artificial Intelligence",
@@ -57,6 +64,7 @@ const capabilities = [
       "Business Process Mapping",
     ],
     image: imgAutomation,
+    lightImage: imgAutomationLight,
   },
   {
     category: "Autonomous Enterprise",
@@ -70,13 +78,17 @@ const capabilities = [
       "Self Monitoring Systems",
     ],
     image: imgAI,
+    lightImage: imgAILight,
   },
 ];
 
 const Capabilities = () => {
+  const { isDark } = useTheme();
+
   return (
     <section className="capabilities">
       {capabilities.map((cap, i) => {
+        const displayedImage = !isDark && cap.lightImage ? cap.lightImage : cap.image;
         return (
           <div className="capability-card" key={i}>
             <div className="capability-left">
@@ -94,7 +106,7 @@ const Capabilities = () => {
               </div>
             </div>
             <div className="capability-right">
-              <img src={cap.image} alt={cap.title} />
+              <img src={displayedImage} alt={cap.title} />
             </div>
           </div>
         );

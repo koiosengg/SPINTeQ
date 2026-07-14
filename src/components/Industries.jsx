@@ -8,6 +8,7 @@ import Brain from "./Industries/Brain";
 import Economics from "./Industries/Economics";
 import ExploreSolutions from "./Approach/ExploreSolutions";
 import img12 from "../assets/Approach/Rectangle 12.png";
+import img12Light from "../assets/Approach/Rectangle 12 light.png";
 import { IndustriesPageStructuredData } from "../structured-data/index.jsx";
 // import img13 from "../assets/CoreValue/Rectangle 13.png";
 const Industries = () => {
@@ -47,6 +48,7 @@ const Industries = () => {
         }
         description="Explore intelligent solutions designed to solve complex operational challenges."
         image={img12}
+        lightImage={img12Light}
         imageAlt="AI Solution Optimizer Dashboard"
         btnHref="/solutions"
       />
