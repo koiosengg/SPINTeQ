@@ -132,8 +132,8 @@
   .transformation-card {
     background: linear-gradient(
       96deg,
-      rgba(174, 61, 216, 0.12) 1.22%,
-      rgba(238, 238, 238, 0.3) 118.2%
+      rgba(219, 121, 255, 0.3) 1.22%,
+      rgba(77, 128, 255, 0.3) 118.2%
     );
   }
 
@@ -394,10 +394,10 @@
   .get-in-touch-card {
     box-shadow: none;
     background:
-      radial-gradient(
-        70.71% 70.71% at 50% 50%,
-        rgba(255, 255, 255, 0.04) 0%,
-        rgba(255, 255, 255, 0) 100%
+      linear-gradient(
+        96deg,
+        rgba(219, 121, 255, 0.3) 1.22%,
+        rgba(87, 134, 253, 0.3) 118.2%
       ),
       var(--Card-color, rgba(238, 238, 238, 0.75));
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -416,22 +416,6 @@
     background-image:
       linear-gradient(rgba(140, 4, 190, 0.08) 1px, transparent 1px),
       linear-gradient(90deg, rgba(140, 4, 190, 0.08) 1px, transparent 1px);
-  }
-
-  .get-in-touch-card:hover::before {
-    background-image:
-      linear-gradient(rgba(90, 90, 90, 0.4) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(90, 90, 90, 0.4) 1px, transparent 1px);
-  }
-
-  .get-in-touch-card:hover {
-    background:
-      radial-gradient(
-        70.71% 70.71% at 50% 50%,
-        rgba(190, 4, 150, 0.12) 0%,
-        rgba(190, 4, 150, 0) 100%
-      ),
-      var(--Card-color, rgba(238, 238, 238, 0.75));
   }
 
   .get-in-touch-title {
