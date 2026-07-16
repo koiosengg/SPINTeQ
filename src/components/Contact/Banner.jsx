@@ -149,7 +149,11 @@ const ContactBanner = () => {
       {/* Form card */}
       <div className="contact-banner-form-wrap">
         <div className="contact-banner-form-container">
-          <form className="contact-form">
+          <form
+            action="https://formspree.io/f/xbdndqyp"
+            method="POST"
+            className="contact-form"
+          >
             <div className="contact-form-container">
               <div className="contact-form-input">
                 <label htmlFor="cb-name">Name*</label>

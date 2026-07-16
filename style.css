@@ -4743,7 +4743,7 @@ body.no-scroll {
   border: 0.8px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
   outline: none;
-  color: #6a7282;
+  color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-style: normal;
