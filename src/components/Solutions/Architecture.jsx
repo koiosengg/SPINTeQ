@@ -1,5 +1,6 @@
 import React from "react";
 import archImg from "../../assets/Solutions/Architecture.png";
+import archImgLight from "../../assets/Solutions/Architecture-light.png";
 import ring27 from "../../assets/Solutions/ring-1.png";
 import ring28 from "../../assets/Solutions/ring-2.png";
 import ring29 from "../../assets/Solutions/ring-3.png";
@@ -11,8 +12,11 @@ import whiteBg from "../../assets/Solutions/White.png";
 import whiteOuterBg from "../../assets/Solutions/White-1.png";
 import edgeLabel from "../../assets/Solutions/Edge AI Accelerator.png";
 import routerLabel from "../../assets/Solutions/GIGABIT ROUTER.png";
+import { useTheme } from "../../context/ThemeContext";
 
 const Architecture = () => {
+  const { isDark } = useTheme();
+  const displayedArchImg = isDark ? archImg : archImgLight;
   return (
     <section className="solutions-architecture">
       <div className="solutions-architecture-container">
@@ -87,7 +91,7 @@ const Architecture = () => {
             {/* Central core illustration */}
             <div className="solutions-architecture-img-wrap">
               <img
-                src={archImg}
+                src={displayedArchImg}
                 alt="The Wave Platform Architecture Diagram"
                 className="solutions-architecture-img"
               />

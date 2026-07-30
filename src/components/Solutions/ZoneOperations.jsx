@@ -6,7 +6,10 @@ import img4 from "../../assets/Solutions/ZoneOperations/4.png";
 import img5 from "../../assets/Solutions/ZoneOperations/5.png";
 import img6 from "../../assets/Solutions/ZoneOperations/6.png";
 import img7 from "../../assets/Solutions/ZoneOperations/7.png";
+import img7Light from "../../assets/Solutions/ZoneOperations/7-light.png";
 import img8 from "../../assets/Solutions/ZoneOperations/8.png";
+import img8Light from "../../assets/Solutions/ZoneOperations/8-light.png";
+import { useTheme } from "../../context/ThemeContext";
 
 const tabs = [
   {
@@ -17,12 +20,14 @@ const tabs = [
         title: "Gate Keeper",
         desc: "Instantly digitizes vehicle entry. The total Turn-Around Time (TAT) clock is initiated across multi-gate facilities with zero human intervention.",
         image: img8,
+        imageLight: img8Light,
         imageAlt: "Gate Keeper",
       },
       {
         title: "Quality Lens",
         desc: "Computer vision scans for pre-existing surface defects, creating a timestamped, visual log to prevent disputes. Syncs directly to the Dealer Management System (DMS).",
         image: img7,
+        imageLight: img7Light,
         imageAlt: "Quality Lens",
       },
     ],
@@ -79,6 +84,7 @@ const tabs = [
 
 const ZoneOperations = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { isDark } = useTheme();
   const active = tabs[activeIndex];
 
   return (
@@ -124,7 +130,11 @@ const ZoneOperations = () => {
             <div key={i} className="solutions-growth-card solutions-zone-card">
               <div className="solutions-zone-card-image-wrap">
                 <img
-                  src={card.image}
+                  src={
+                    isDark
+                      ? card.image
+                      : card.imageLight || card.image
+                  }
                   alt={card.imageAlt}
                   className="solutions-zone-card-image"
                 />

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import asset01 from "../../assets/Solutions/asset-01.png";
+import asset01Light from "../../assets/Solutions/asset-01-light.png";
 import asset02 from "../../assets/Solutions/asset-02.png";
 import asset03 from "../../assets/Solutions/asset-03.png";
+import { useTheme } from "../../context/ThemeContext";
 
 const defaultTabs = [
   {
@@ -22,6 +24,7 @@ const defaultTabs = [
       },
     ],
     image: asset01,
+    imageLight: asset01Light,
     imageAlt: "Asset 01 – Command Center Dashboard",
     fit: "contain",
   },
@@ -83,6 +86,7 @@ const Asset = ({
   className = "",
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { isDark } = useTheme();
   const active = tabs[activeIndex];
 
   return (
@@ -133,7 +137,11 @@ const Asset = ({
           {/* Right – image */}
           <div className={`solutions-asset-image-wrap wrap-tab-${activeIndex}`}>
             <img
-              src={active.image}
+              src={
+                isDark
+                  ? active.image
+                  : active.imageLight || active.image
+              }
               alt={active.imageAlt}
               className={`solutions-asset-image image-tab-${activeIndex} ${
                 active.fit
