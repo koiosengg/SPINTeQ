@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import asset01 from "../../assets/Solutions/asset-01.png";
 import asset01Light from "../../assets/Solutions/asset-01-light.png";
 import asset02 from "../../assets/Solutions/asset-02.png";
+import asset02Light from "../../assets/Solutions/asset-02-light.png";
 import asset03 from "../../assets/Solutions/asset-03.png";
+import asset03Light from "../../assets/Solutions/asset-03-light.png";
 import { useTheme } from "../../context/ThemeContext";
 
 const defaultTabs = [
@@ -47,6 +49,7 @@ const defaultTabs = [
       },
     ],
     image: asset02,
+    imageLight: asset02Light,
     imageAlt: "Asset 02 – Gap Discovery Analysis",
     fit: "cover",
   },
@@ -69,6 +72,7 @@ const defaultTabs = [
       },
     ],
     image: asset03,
+    imageLight: asset03Light,
     imageAlt: "Asset 03 – ROI Multiplier",
     fit: "contain",
   },

@@ -567,8 +567,14 @@
   .solutions-insight {
     background: var(--bg-primary);
   }
+  .solutions-insight-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
   .solutions-insight-image {
     object-fit: cover;
+    border-radius: 16px;
   }
   .solutions-insight-title {
     color: #0d0d0d;
