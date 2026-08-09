@@ -1,5 +1,5 @@
 import React from "react";
-import growthImg from "../../assets/Solutions/Growth.png";
+import growthImg from "../../assets/Solutions/Growth.webp";
 
 const Growth = () => {
   const cards = [

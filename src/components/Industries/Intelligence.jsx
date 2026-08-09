@@ -1,7 +1,12 @@
-import intel1 from "../../assets/Industries/Intelligence 1.png";
-import intel2 from "../../assets/Industries/Intelligence 2.png";
+import React from "react";
+import { useTheme } from "../../context/ThemeContext";
+import intel1 from "../../assets/Industries/Intelligence 1.webp";
+import intel2Dark from "../../assets/Industries/Intelligence 2.webp";
+import intel2Light from "../../assets/Industries/Intelligence 2-light.webp";
 
 function Intelligence() {
+  const { isDark } = useTheme();
+
   return (
     <section className="ind-intel">
       <div className="ind-intel-header">
@@ -35,7 +40,7 @@ function Intelligence() {
         <div className="ind-intel-card ind-intel-card--spinteq">
           <div className="ind-intel-card-img-wrap">
             <img
-              src={intel2}
+              src={isDark ? intel2Dark : intel2Light}
               alt="SPINTeQ Algorithmic Vision"
               className="ind-intel-card-img"
             />

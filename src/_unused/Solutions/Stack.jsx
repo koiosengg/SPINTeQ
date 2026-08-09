@@ -1,5 +1,5 @@
 import React from 'react';
-import stackImg from '../../assets/Solutions/stack.png';
+import stackImg from '../../assets/Solutions/stack.webp';
 
 const Stack = () => {
   return (

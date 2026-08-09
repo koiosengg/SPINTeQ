@@ -1,15 +1,15 @@
 import React from "react";
 import { useTheme } from "../../context/ThemeContext";
-import logo1 from "../../assets/Home/Marquee/logo1.png";
-import logo1Light from "../../assets/Home/Marquee/logo1-light.png";
-import logo2 from "../../assets/Home/Marquee/logo2.png";
-import logo2Light from "../../assets/Home/Marquee/logo2-light.png";
-import logo3 from "../../assets/Home/Marquee/logo3.png";
-import logo3Light from "../../assets/Home/Marquee/logo3-light.png";
-import logo4 from "../../assets/Home/Marquee/logo4.png";
-import logo4Light from "../../assets/Home/Marquee/logo4-light.png";
-import logo5 from "../../assets/Home/Marquee/logo5.png";
-import logo5Light from "../../assets/Home/Marquee/logo5-light.png";
+import logo1 from "../../assets/Home/Marquee/logo1.webp";
+import logo1Light from "../../assets/Home/Marquee/logo1-light.webp";
+import logo2 from "../../assets/Home/Marquee/logo2.webp";
+import logo2Light from "../../assets/Home/Marquee/logo2-light.webp";
+import logo3 from "../../assets/Home/Marquee/logo3.webp";
+import logo3Light from "../../assets/Home/Marquee/logo3-light.webp";
+import logo4 from "../../assets/Home/Marquee/logo4.webp";
+import logo4Light from "../../assets/Home/Marquee/logo4-light.webp";
+import logo5 from "../../assets/Home/Marquee/logo5.webp";
+import logo5Light from "../../assets/Home/Marquee/logo5-light.webp";
 
 const Marquee = () => {
   const { isDark } = useTheme();

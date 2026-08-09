@@ -1,5 +1,5 @@
 import React from "react";
-import brainImg from "../../assets/Industries/Brain.png";
+import brainImg from "../../assets/Industries/Brain.webp";
 
 function Brain() {
   return (

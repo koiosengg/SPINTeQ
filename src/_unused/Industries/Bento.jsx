@@ -1,11 +1,11 @@
-import img1 from "../../assets/Industries/Bento/Img1.png";
-import img2 from "../../assets/Industries/Bento/Img2.png";
-import img3 from "../../assets/Industries/Bento/Img3.png";
-import img5 from "../../assets/Industries/Bento/Img5.png";
-import img6 from "../../assets/Industries/Bento/Img6.png";
-import img7 from "../../assets/Industries/Bento/Img7.png";
-import img8 from "../../assets/Industries/Bento/Img8.png";
-import img9 from "../../assets/Industries/Bento/Img9.png";
+import img1 from "../../assets/Industries/Bento/Img1.webp";
+import img2 from "../../assets/Industries/Bento/Img2.webp";
+import img3 from "../../assets/Industries/Bento/Img3.webp";
+import img5 from "../../assets/Industries/Bento/Img5.webp";
+import img6 from "../../assets/Industries/Bento/Img6.webp";
+import img7 from "../../assets/Industries/Bento/Img7.webp";
+import img8 from "../../assets/Industries/Bento/Img8.webp";
+import img9 from "../../assets/Industries/Bento/Img9.webp";
 const sectors = [
   {
     img: img1,

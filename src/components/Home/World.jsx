@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
-import StarBg from "../../assets/Home/World/world.png";
-import StarBgResp from "../../assets/Home/World/world-resp.png";
-import StarBgLight from "../../assets/Home/World/world-light.png";
+import StarBg from "../../assets/Home/World/world.webp";
+import StarBgResp from "../../assets/Home/World/world-resp.webp";
+import StarBgLight from "../../assets/Home/World/world-light.webp";
 
 function World() {
   const { isDark } = useTheme();

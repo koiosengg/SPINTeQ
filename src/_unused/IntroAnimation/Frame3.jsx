@@ -1,8 +1,8 @@
 import React from "react";
-import DesktopBackground from "../../assets/IntroAnimation/Frame3/Desktop Background.png";
-import Glare1 from "../../assets/IntroAnimation/Frame3/Glare1.png";
-import Glare2 from "../../assets/IntroAnimation/Frame3/Glare2.png";
-import MobileBackground from "../../assets/IntroAnimation/Frame3/Mobile Background.png";
+import DesktopBackground from "../../assets/IntroAnimation/Frame3/Desktop Background.webp";
+import Glare1 from "../../assets/IntroAnimation/Frame3/Glare1.webp";
+import Glare2 from "../../assets/IntroAnimation/Frame3/Glare2.webp";
+import MobileBackground from "../../assets/IntroAnimation/Frame3/Mobile Background.webp";
 
 function Frame3() {
   return (

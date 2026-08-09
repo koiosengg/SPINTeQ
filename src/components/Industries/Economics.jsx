@@ -1,31 +1,36 @@
 import React, { useState } from "react";
-import roi1 from "../../assets/Industries/Economics/ROI-1.png";
-import roi2 from "../../assets/Industries/Economics/ROI-2.png";
-import roi3 from "../../assets/Industries/Economics/ROI-3.png";
-
-const slides = [
-  {
-    title: "Rapid Timing",
-    desc: "Dramatically reduce workplace injuries, perimeter breaches, and liability claims through sub-second hazard alerts.",
-    image: roi1,
-    imageAlt: "ROI – Rapid Timing Dashboard",
-  },
-  {
-    title: "Zero-Leak Revenue",
-    desc: "Eliminate blind spots in billing cycles, unscanned transactions, and idle resource windows that quietly drain margin.",
-    image: roi2,
-    imageAlt: "ROI – Zero-Leak Revenue Analytics",
-  },
-  {
-    title: "Exponential ROI",
-    desc: "A 1% improvement in spatial utilization compounds into outsized bottom-line gains — the SPINTeQ multiplier effect.",
-    image: roi3,
-    imageAlt: "ROI – Exponential Returns Model",
-  },
-];
+import { useTheme } from "../../context/ThemeContext";
+import roi1 from "../../assets/Industries/Economics/ROI-1.webp";
+import roi1Light from "../../assets/Industries/Economics/ROI-1-light.webp";
+import roi2 from "../../assets/Industries/Economics/ROI-2.webp";
+import roi2Light from "../../assets/Industries/Economics/ROI-2-light.webp";
+import roi3 from "../../assets/Industries/Economics/ROI-3.webp";
+import roi3Light from "../../assets/Industries/Economics/ROI-3-light.webp";
 
 function Economics() {
+  const { isDark } = useTheme();
   const [current, setCurrent] = useState(0);
+
+  const slides = [
+    {
+      title: "Rapid Timing",
+      desc: "Dramatically reduce workplace injuries, perimeter breaches, and liability claims through sub-second hazard alerts.",
+      image: isDark ? roi1 : roi1Light,
+      imageAlt: "ROI – Rapid Timing Dashboard",
+    },
+    {
+      title: "Zero-Leak Revenue",
+      desc: "Eliminate blind spots in billing cycles, unscanned transactions, and idle resource windows that quietly drain margin.",
+      image: isDark ? roi2 : roi2Light,
+      imageAlt: "ROI – Zero-Leak Revenue Analytics",
+    },
+    {
+      title: "Exponential ROI",
+      desc: "A 1% improvement in spatial utilization compounds into outsized bottom-line gains — the SPINTeQ multiplier effect.",
+      image: isDark ? roi3 : roi3Light,
+      imageAlt: "ROI – Exponential Returns Model",
+    },
+  ];
 
   const isFirst = current === 0;
   const isLast = current === slides.length - 1;

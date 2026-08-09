@@ -1,9 +1,9 @@
 import React from "react";
 import { useTheme } from "../../context/ThemeContext";
-import CardGrid1 from "../../assets/Home/Banner/card-gridline.png";
-import CardGrid1Light from "../../assets/Home/Banner/card-gridline.png";
-import CardGrid2 from "../../assets/Home/Banner/card-gridline1.png";
-import CardGrid2Light from "../../assets/Home/Banner/card-gridline1.png";
+import CardGrid1 from "../../assets/Home/Banner/card-gridline.webp";
+import CardGrid1Light from "../../assets/Home/Banner/card-gridline.webp";
+import CardGrid2 from "../../assets/Home/Banner/card-gridline1.webp";
+import CardGrid2Light from "../../assets/Home/Banner/card-gridline1.webp";
 
 /* ── Card 1: 4 dots converging toward the center ball ── */
 const ConvergingDots = () => {

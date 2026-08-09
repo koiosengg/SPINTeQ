@@ -1,17 +1,18 @@
 import Asset from "../Solutions/Asset";
-import a1 from "../../assets/Industries/Asset/A1.png";
-import a1Light from "../../assets/Industries/Asset/A1-light.png";
-import a2 from "../../assets/Industries/Asset/A2.png";
-import a2Light from "../../assets/Industries/Asset/A2-light.png";
-import a3 from "../../assets/Industries/Asset/A3.png";
-import a3Light from "../../assets/Industries/Asset/A3-light.png";
-import a4 from "../../assets/Industries/Asset/A4.png";
-import a4Light from "../../assets/Industries/Asset/A4-light.png";
-import a5 from "../../assets/Industries/Asset/A5.png";
-import a5Light from "../../assets/Industries/Asset/A5-light.png";
-import a6 from "../../assets/Industries/Asset/A6.png";
-import a6Light from "../../assets/Industries/Asset/A6-light.png";
-import a7 from "../../assets/Industries/Asset/A7.png";
+import a1 from "../../assets/Industries/Asset/A1.webp";
+import a1Light from "../../assets/Industries/Asset/A1-light.webp";
+import a2 from "../../assets/Industries/Asset/A2.webp";
+import a2Light from "../../assets/Industries/Asset/A2-light.webp";
+import a3 from "../../assets/Industries/Asset/A3.webp";
+import a3Light from "../../assets/Industries/Asset/A3-light.webp";
+import a4 from "../../assets/Industries/Asset/A4.webp";
+import a4Light from "../../assets/Industries/Asset/A4-light.webp";
+import a5 from "../../assets/Industries/Asset/A5.webp";
+import a5Light from "../../assets/Industries/Asset/A5-light.webp";
+import a6 from "../../assets/Industries/Asset/A6.webp";
+import a6Light from "../../assets/Industries/Asset/A6-light.webp";
+import a7 from "../../assets/Industries/Asset/A7.webp";
+import a7Light from "../../assets/Industries/Asset/A7-light.webp";
 
 const pillarTabs = [
   {
@@ -192,6 +193,7 @@ const pillarTabs = [
       },
     ],
     image: a7,
+    imageLight: a7Light,
     imageAlt: "Specialized Threat Detection – Weapon and fire detection",
     fit: "cover",
   },

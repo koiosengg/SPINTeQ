@@ -1,6 +1,6 @@
-import clarityIcon from "../../assets/Home/Core/Clarity.png";
-import AiIcon from "../../assets/Home/Core/AI.png";
-import flowIcon from "../../assets/Home/Core/Flow.png";
+import clarityIcon from "../../assets/Home/Core/Clarity.webp";
+import AiIcon from "../../assets/Home/Core/AI.webp";
+import flowIcon from "../../assets/Home/Core/Flow.webp";
 
 const defaultItems = [
   {

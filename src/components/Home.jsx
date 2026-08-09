@@ -8,10 +8,10 @@ import Industries from "./Home/Industries";
 import System from "./Home/System";
 import Core from "./Home/Core";
 import ExploreSolutions from "./Approach/ExploreSolutions";
-import img12 from "../assets/Approach/Rectangle 12.png";
-import img12Light from "../assets/Approach/Rectangle 12 light.png";
-import img13 from "../assets/Approach/Rectangle 13.png";
-import img13Light from "../assets/Approach/Rectangle 13 light.png";
+import img12 from "../assets/Approach/Rectangle 12.webp";
+import img12Light from "../assets/Approach/Rectangle 12 light.webp";
+import img13 from "../assets/Approach/Rectangle 13.webp";
+import img13Light from "../assets/Approach/Rectangle 13 light.webp";
 import { HomePageStructuredData } from "../structured-data/index.jsx";
 
 const Home = () => {

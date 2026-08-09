@@ -4,7 +4,7 @@
 
 const BASE_URL = "https://www.spinteq.in";
 const COMPANY_NAME = "SPINTeQ";
-const LOGO_URL = `${BASE_URL}/Logo.png`;
+const LOGO_URL = `${BASE_URL}/Logo.webp`;
 
 // ============================================
 // 1. ORGANIZATION SCHEMA

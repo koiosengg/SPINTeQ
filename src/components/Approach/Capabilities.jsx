@@ -1,14 +1,14 @@
 import React from "react";
-import imgProcess from "../../assets/Approach/Capabilities/image 7.png";
-import imgProcessLight from "../../assets/Approach/Capabilities/image 7-light.png";
-import imgDigitisation from "../../assets/Approach/Capabilities/image 8.png";
-import imgDigitisationLight from "../../assets/Approach/Capabilities/image 8-light.png";
-import imgAutomation from "../../assets/Approach/Capabilities/image 9.png";
-import imgAutomationLight from "../../assets/Approach/Capabilities/image 9-light.png";
-import imgAI from "../../assets/Approach/Capabilities/image 10.png";
-import imgAILight from "../../assets/Approach/Capabilities/image 10-light.png";
-import imgAutonomous from "../../assets/Approach/Capabilities/Rectangle 2.png";
-import imgAutonomousLight from "../../assets/Approach/Capabilities/Rectangle 2-light.png";
+import imgProcess from "../../assets/Approach/Capabilities/image 7.webp";
+import imgProcessLight from "../../assets/Approach/Capabilities/image 7-light.webp";
+import imgDigitisation from "../../assets/Approach/Capabilities/image 8.webp";
+import imgDigitisationLight from "../../assets/Approach/Capabilities/image 8-light.webp";
+import imgAutomation from "../../assets/Approach/Capabilities/image 9.webp";
+import imgAutomationLight from "../../assets/Approach/Capabilities/image 9-light.webp";
+import imgAI from "../../assets/Approach/Capabilities/image 10.webp";
+import imgAILight from "../../assets/Approach/Capabilities/image 10-light.webp";
+import imgAutonomous from "../../assets/Approach/Capabilities/Rectangle 2.webp";
+import imgAutonomousLight from "../../assets/Approach/Capabilities/Rectangle 2-light.webp";
 import { useTheme } from "../../context/ThemeContext";
 
 const capabilities = [

@@ -1132,7 +1132,7 @@
     color: #595959;
   }
   .ind-economics-overlay {
-    background: transparent;
+    background: linear-gradient(to top, #ffffff 30%, transparent 100%);
   }
   .ind-economics-arrow {
     color: rgba(13, 13, 13, 0.2);
@@ -1144,20 +1144,92 @@
     color: rgba(13, 13, 13, 0.2) !important;
   }
   .ind-intel-card--traditional {
-    background: rgba(210, 210, 210, 0.75) !important;
+    background: rgba(238, 238, 238, 0.75);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .ind-intel-card--traditional,
+
+  .ind-intel-card--traditional::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+      url("src/assets/Industries/spreadsheet-grid.webp") no-repeat top center /
+        contain,
+      radial-gradient(
+        70.71% 70.71% at 50% 50%,
+        rgba(81, 81, 81, 0.05) 0%,
+        rgba(44, 44, 44, 0) 100%
+      ),
+      radial-gradient(
+        70.71% 70.71% at 50% 50%,
+        rgba(0, 0, 0, 0.04) 0%,
+        rgba(80, 80, 80, 0) 100%
+      ),
+      #e8e8e8;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .ind-intel-card--traditional:hover::before {
+    opacity: 1 !important;
+  }
+
+  .ind-intel-card--traditional:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+  }
+
   .ind-intel-card--spinteq {
-    border-radius: 16px;
-    background: var(--Card-color, rgba(238, 238, 238, 0.75));
+    position: relative;
+    background: #f1e9f9;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .ind-intel-card--traditional:hover,
-  .ind-intel-card--spinteq:hover {
-    box-shadow: none !important;
+
+  .ind-intel-card--spinteq::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+      url("src/assets/Industries/spreadsheet-grid.webp") no-repeat top center /
+        contain,
+      radial-gradient(
+        70.71% 70.71% at 50% 50%,
+        rgba(133, 102, 255, 0.1) 0%,
+        rgba(133, 102, 255, 0) 100%
+      ),
+      radial-gradient(
+        70.71% 70.71% at 50% 50%,
+        rgba(140, 4, 190, 0.08) 0%,
+        rgba(140, 4, 190, 0) 100%
+      ),
+      radial-gradient(
+        70.71% 70.71% at 50% 50%,
+        rgba(0, 0, 0, 0.04) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      #ebdcf7;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .ind-intel-card--traditional:hover::before,
+
   .ind-intel-card--spinteq:hover::before {
-    opacity: 0 !important;
+    opacity: 1 !important;
+  }
+
+  .ind-intel-card--spinteq:hover {
+    box-shadow: 0 8px 30px rgba(140, 4, 190, 0.15) !important;
   }
   .solutions-asset-tab.active,
   .solutions-zone-tab.active {

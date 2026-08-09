@@ -1,8 +1,8 @@
-import img1 from "../../assets/Home/Build/slider-img1.png";
-import img2 from "../../assets/Home/Build/slider-img2.png";
-import img3 from "../../assets/Home/Build/slider-img3.png";
-import img4 from "../../assets/Home/Build/slider-img4.png";
-import img5 from "../../assets/Home/Build/slider-img5.png";
+import img1 from "../../assets/Home/Build/slider-img1.webp";
+import img2 from "../../assets/Home/Build/slider-img2.webp";
+import img3 from "../../assets/Home/Build/slider-img3.webp";
+import img4 from "../../assets/Home/Build/slider-img4.webp";
+import img5 from "../../assets/Home/Build/slider-img5.webp";
 
 const images = [img1, img2, img3, img4, img5];
 

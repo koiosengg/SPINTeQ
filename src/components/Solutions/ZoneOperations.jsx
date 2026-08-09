@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import img1 from "../../assets/Solutions/ZoneOperations/1.png";
-import img2 from "../../assets/Solutions/ZoneOperations/2.png";
-import img3 from "../../assets/Solutions/ZoneOperations/3.png";
-import img3Light from "../../assets/Solutions/ZoneOperations/3-light.png";
-import img4 from "../../assets/Solutions/ZoneOperations/4.png";
-import img4Light from "../../assets/Solutions/ZoneOperations/4-light.png";
-import img5 from "../../assets/Solutions/ZoneOperations/5.png";
-import img5Light from "../../assets/Solutions/ZoneOperations/5-light.png";
-import img6 from "../../assets/Solutions/ZoneOperations/6.png";
-import img6Light from "../../assets/Solutions/ZoneOperations/6-light.png";
-import img7 from "../../assets/Solutions/ZoneOperations/7.png";
-import img7Light from "../../assets/Solutions/ZoneOperations/7-light.png";
-import img8 from "../../assets/Solutions/ZoneOperations/8.png";
-import img8Light from "../../assets/Solutions/ZoneOperations/8-light.png";
+import img1 from "../../assets/Solutions/ZoneOperations/1.webp";
+import img2 from "../../assets/Solutions/ZoneOperations/2.webp";
+import img3 from "../../assets/Solutions/ZoneOperations/3.webp";
+import img3Light from "../../assets/Solutions/ZoneOperations/3-light.webp";
+import img4 from "../../assets/Solutions/ZoneOperations/4.webp";
+import img4Light from "../../assets/Solutions/ZoneOperations/4-light.webp";
+import img5 from "../../assets/Solutions/ZoneOperations/5.webp";
+import img5Light from "../../assets/Solutions/ZoneOperations/5-light.webp";
+import img6 from "../../assets/Solutions/ZoneOperations/6.webp";
+import img6Light from "../../assets/Solutions/ZoneOperations/6-light.webp";
+import img7 from "../../assets/Solutions/ZoneOperations/7.webp";
+import img7Light from "../../assets/Solutions/ZoneOperations/7-light.webp";
+import img8 from "../../assets/Solutions/ZoneOperations/8.webp";
+import img8Light from "../../assets/Solutions/ZoneOperations/8-light.webp";
 import { useTheme } from "../../context/ThemeContext";
 
 const tabs = [

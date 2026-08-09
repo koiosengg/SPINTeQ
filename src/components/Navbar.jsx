@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import Logo1 from "../assets/Navbar/Logo1.png";
-import Logo2 from "../assets/Navbar/Logo2.png";
+import Logo1 from "../assets/Navbar/Logo1.webp";
+import Logo2 from "../assets/Navbar/Logo2.webp";
 import { useTheme } from "../context/ThemeContext";
 
 const ThemeToggle = () => {

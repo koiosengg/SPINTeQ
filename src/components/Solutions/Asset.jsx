@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import asset01 from "../../assets/Solutions/asset-01.png";
-import asset01Light from "../../assets/Solutions/asset-01-light.png";
-import asset02 from "../../assets/Solutions/asset-02.png";
-import asset02Light from "../../assets/Solutions/asset-02-light.png";
-import asset03 from "../../assets/Solutions/asset-03.png";
-import asset03Light from "../../assets/Solutions/asset-03-light.png";
+import asset01 from "../../assets/Solutions/asset-01.webp";
+import asset01Light from "../../assets/Solutions/asset-01-light.webp";
+import asset02 from "../../assets/Solutions/asset-02.webp";
+import asset02Light from "../../assets/Solutions/asset-02-light.webp";
+import asset03 from "../../assets/Solutions/asset-03.webp";
+import asset03Light from "../../assets/Solutions/asset-03-light.webp";
 import { useTheme } from "../../context/ThemeContext";
 
 const defaultTabs = [

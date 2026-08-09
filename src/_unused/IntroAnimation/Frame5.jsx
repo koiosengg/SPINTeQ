@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Background from "../../assets/IntroAnimation/Frame5/Background.png";
+import Background from "../../assets/IntroAnimation/Frame5/Background.webp";
 
 function Frame5() {
   const [activeIndex, setActiveIndex] = useState(0);

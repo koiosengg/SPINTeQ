@@ -6,10 +6,10 @@ import Transformation from "./Approach/Transformation";
 import Ecosystem from "./Approach/Ecosystem";
 import Capabilities from "./Approach/Capabilities";
 import ExploreSolutions from "./Approach/ExploreSolutions";
-import img12 from "../assets/Approach/Rectangle 12.png";
-import img12Light from "../assets/Approach/Rectangle 12 light.png";
-import img13 from "../assets/Approach/Rectangle 13.png";
-import img13Light from "../assets/Approach/Rectangle 13 light.png";
+import img12 from "../assets/Approach/Rectangle 12.webp";
+import img12Light from "../assets/Approach/Rectangle 12 light.webp";
+import img13 from "../assets/Approach/Rectangle 13.webp";
+import img13Light from "../assets/Approach/Rectangle 13 light.webp";
 import { ApproachPageStructuredData } from "../structured-data/index.jsx";
 
 const Approach = () => {

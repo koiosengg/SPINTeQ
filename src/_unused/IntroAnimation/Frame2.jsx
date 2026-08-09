@@ -1,5 +1,5 @@
 import React from "react";
-import Ellipse from "../../assets/IntroAnimation/Frame2/Ellipse.png";
+import Ellipse from "../../assets/IntroAnimation/Frame2/Ellipse.webp";
 
 function Frame2() {
   return (

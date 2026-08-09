@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useTheme } from "../../context/ThemeContext";
-import Circle from "../../assets/Home/Banner/Circle.png";
+import Circle from "../../assets/Home/Banner/Circle.webp";
 
 const CELL = 120;
 const PERSP = 800;
@@ -64,7 +64,9 @@ const ContactBanner = () => {
         H = canvas.height;
       ctx.clearRect(0, 0, W, H);
       const maxGY = (H * PERSP) / (cosA * PERSP + H * sinA);
-      ctx.strokeStyle = isDark ? "rgba(255, 255, 255, 0.18)" : "rgba(0, 0, 0, 0.12)";
+      ctx.strokeStyle = isDark
+        ? "rgba(255, 255, 255, 0.18)"
+        : "rgba(0, 0, 0, 0.12)";
       ctx.lineWidth = 1;
       ctx.beginPath();
       const numRows = Math.ceil(maxGY / CELL) + 2;
@@ -116,14 +118,14 @@ const ContactBanner = () => {
           <img
             ref={circleRef}
             src={Circle}
-            alt=""
+            alt="Circle"
             role="presentation"
             className="contact-banner-circle circle-left"
             onLoad={updateHeight}
           />
           <img
             src={Circle}
-            alt=""
+            alt="Circle"
             role="presentation"
             className="contact-banner-circle circle-right"
           />

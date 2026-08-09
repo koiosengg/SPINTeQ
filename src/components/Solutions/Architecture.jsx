@@ -1,17 +1,17 @@
 import React from "react";
-import archImg from "../../assets/Solutions/Architecture.png";
-import archImgLight from "../../assets/Solutions/Architecture-light.png";
-import ring27 from "../../assets/Solutions/ring-1.png";
-import ring28 from "../../assets/Solutions/ring-2.png";
-import ring29 from "../../assets/Solutions/ring-3.png";
-import ring30 from "../../assets/Solutions/ring-4.png";
-import ring31 from "../../assets/Solutions/ring-5.png";
-import ring32 from "../../assets/Solutions/ring-6.png";
-import ring33 from "../../assets/Solutions/ring-7.png";
-import whiteBg from "../../assets/Solutions/White.png";
-import whiteOuterBg from "../../assets/Solutions/White-1.png";
-import edgeLabel from "../../assets/Solutions/Edge AI Accelerator.png";
-import routerLabel from "../../assets/Solutions/GIGABIT ROUTER.png";
+import archImg from "../../assets/Solutions/Architecture.webp";
+import archImgLight from "../../assets/Solutions/Architecture-light.webp";
+import ring27 from "../../assets/Solutions/ring-1.webp";
+import ring28 from "../../assets/Solutions/ring-2.webp";
+import ring29 from "../../assets/Solutions/ring-3.webp";
+import ring30 from "../../assets/Solutions/ring-4.webp";
+import ring31 from "../../assets/Solutions/ring-5.webp";
+import ring32 from "../../assets/Solutions/ring-6.webp";
+import ring33 from "../../assets/Solutions/ring-7.webp";
+import whiteBg from "../../assets/Solutions/White.webp";
+import whiteOuterBg from "../../assets/Solutions/White-1.webp";
+import edgeLabel from "../../assets/Solutions/Edge AI Accelerator.webp";
+import routerLabel from "../../assets/Solutions/GIGABIT ROUTER.webp";
 import { useTheme } from "../../context/ThemeContext";
 
 const Architecture = () => {
@@ -37,7 +37,7 @@ const Architecture = () => {
 
         <div className="solutions-architecture-right">
           <div className="solutions-architecture-diagram">
-            {/* Outermost ring with White-1.png background */}
+            {/* Outermost ring with White-1.webp background */}
             <img
               src={whiteOuterBg}
               alt=""
@@ -45,20 +45,48 @@ const Architecture = () => {
             />
 
             {/* Concentric rings background from assets */}
-            <img src={ring33} alt="" className="solutions-arch-ring ring-33" />
-            <img src={ring32} alt="" className="solutions-arch-ring ring-32" />
-            <img src={ring31} alt="" className="solutions-arch-ring ring-31" />
-            <img src={ring30} alt="" className="solutions-arch-ring ring-30" />
-            <img src={ring29} alt="" className="solutions-arch-ring ring-29" />
-            <img src={ring28} alt="" className="solutions-arch-ring ring-28" />
+            <img
+              src={ring33}
+              alt="ring 1"
+              className="solutions-arch-ring ring-33"
+            />
+            <img
+              src={ring32}
+              alt="ring 2"
+              className="solutions-arch-ring ring-32"
+            />
+            <img
+              src={ring31}
+              alt="ring 3"
+              className="solutions-arch-ring ring-31"
+            />
+            <img
+              src={ring30}
+              alt="ring 4"
+              className="solutions-arch-ring ring-30"
+            />
+            <img
+              src={ring29}
+              alt="ring 5"
+              className="solutions-arch-ring ring-29"
+            />
+            <img
+              src={ring28}
+              alt="ring 6"
+              className="solutions-arch-ring ring-28"
+            />
 
-            {/* Innermost ring background with White.png */}
+            {/* Innermost ring background with White.webp */}
             <img
               src={whiteBg}
-              alt=""
+              alt="ring bg"
               className="solutions-arch-ring ring-27 ring-27-bg"
             />
-            <img src={ring27} alt="" className="solutions-arch-ring ring-27" />
+            <img
+              src={ring27}
+              alt="ring 7"
+              className="solutions-arch-ring ring-27"
+            />
 
             {/* Sweeping radar light SVG */}
             <svg

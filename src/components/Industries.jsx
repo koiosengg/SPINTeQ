@@ -7,10 +7,10 @@ import Pillars from "./Industries/Pillars";
 import Brain from "./Industries/Brain";
 import Economics from "./Industries/Economics";
 import ExploreSolutions from "./Approach/ExploreSolutions";
-import img12 from "../assets/Approach/Rectangle 12.png";
-import img12Light from "../assets/Approach/Rectangle 12 light.png";
+import img12 from "../assets/Approach/Rectangle 12.webp";
+import img12Light from "../assets/Approach/Rectangle 12 light.webp";
 import { IndustriesPageStructuredData } from "../structured-data/index.jsx";
-// import img13 from "../assets/CoreValue/Rectangle 13.png";
+// import img13 from "../assets/CoreValue/Rectangle 13.webp";
 const Industries = () => {
   return (
     <>

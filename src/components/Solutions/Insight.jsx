@@ -1,6 +1,6 @@
 import React from "react";
-import insightBg from "../../assets/Solutions/Insight.png";
-import insightBgLight from "../../assets/Solutions/Insight-light.png";
+import insightBg from "../../assets/Solutions/Insight.webp";
+import insightBgLight from "../../assets/Solutions/Insight-light.webp";
 import { useTheme } from "../../context/ThemeContext";
 
 const Insight = () => {

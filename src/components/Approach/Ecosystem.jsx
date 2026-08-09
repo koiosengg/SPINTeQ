@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "../../context/ThemeContext";
-import logoImg from "../../assets/Footer/Logo copy.png";
+import logoImg from "../../assets/Footer/Logo copy.webp";
 
 const Ecosystem = () => {
   const { isDark } = useTheme();

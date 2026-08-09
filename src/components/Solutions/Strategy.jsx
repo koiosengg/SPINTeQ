@@ -1,5 +1,5 @@
 import React from "react";
-import strategyImg from "../../assets/Solutions/Stratergy.png";
+import strategyImg from "../../assets/Solutions/Stratergy.webp";
 
 const Strategy = () => {
   const cardsData = [

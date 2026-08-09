@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/Home/Build/slider-img1.png";
+import img from "../../assets/Home/Build/slider-img1.webp";
 const AboutOverview = () => {
   const steps = [
     {
@@ -29,7 +29,7 @@ const AboutOverview = () => {
       </div>
       <div className="about-overview-content">
         <div className="about-overview-left">
-          <img src={img} alt="" />
+          <img src={img} alt="Overview" />
         </div>
         <div className="about-overview-right">
           {steps.map((step) => (

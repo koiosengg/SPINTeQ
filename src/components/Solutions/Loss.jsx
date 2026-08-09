@@ -1,5 +1,5 @@
 import React from "react";
-import lossImg from "../../assets/Solutions/Loss.png";
+import lossImg from "../../assets/Solutions/Loss.webp";
 
 const Loss = () => {
   return (

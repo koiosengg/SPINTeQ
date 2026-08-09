@@ -1,28 +1,35 @@
 import React, { useState } from "react";
-import img1Dark from "../../assets/About/Img1.png";
-import img2 from "../../assets/About/Img2.png";
-import img3 from "../../assets/About/Img3.png";
-import img4 from "../../assets/About/Img4.png";
+import { useTheme } from "../../context/ThemeContext";
+import img1Dark from "../../assets/About/Img1.webp";
+import img1Light from "../../assets/About/img1-light.webp";
+import img2Dark from "../../assets/About/Img2.webp";
+import img2Light from "../../assets/About/Img2-light.webp";
+import img3Dark from "../../assets/About/Img3.webp";
+import img3Light from "../../assets/About/Img3-light.webp";
+import img4Dark from "../../assets/About/Img4.webp";
+import img4Light from "../../assets/About/Img4-light.webp";
 
 const History = () => {
+  const { isDark } = useTheme();
+
   const slides = [
     {
-      img: img1Dark,
+      img: isDark ? img1Dark : img1Light,
       title: "18 Years Of Expertiese",
       desc: "For over 18 years, SPINTeQ has been helping organizations transform operations through digital innovation, workflow automation, and intelligent enterprise solutions. We partner with businesses across multiple industry verticals to simplify complexity, improve visibility, enhance productivity, and accelerate growth.",
     },
     {
-      img: img2,
+      img: isDark ? img2Dark : img2Light,
       title: "Digital Transformation",
       desc: "Having enabled digital transformation initiatives across Automotive, Manufacturing, Logistics, Industrial Services, Smart Infrastructure, Healthcare, Retail, and Enterprise Services, we understand the operational challenges that modern organizations face.",
     },
     {
-      img: img3,
+      img: isDark ? img3Dark : img3Light,
       title: "Next Evolution",
       desc: "Today, SPINTeQ is focused on the next evolution of business transformation - Architecting Autonomous Enterprises through AI, Computer Vision, IoT, Intelligent Automation, and Data-Drivren Decision Systems.",
     },
     {
-      img: img4,
+      img: isDark ? img4Dark : img4Light,
       title: "Our Mission",
       desc: "Our mission is simple: help organizations move from manual operations to intelligent operations, and ultimately to autonomous operations.",
     },
