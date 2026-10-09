@@ -9,6 +9,8 @@ import Industries from "./components/Industries";
 import Solutions from "./components/Solutions";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import Terms from "./components/Terms";
 import Footer from "./components/Footer";
 import World from "./components/Home/World";
 import Testimonials from "./components/Testimonials";
@@ -55,6 +57,10 @@ function App() {
             <Route path="solutions" element={<Solutions />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
+            <Route path="privacy" element={<PrivacyPolicy />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="terms" element={<Terms />} />
+            <Route path="terms-and-conditions" element={<Terms />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

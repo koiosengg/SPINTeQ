@@ -1529,3 +1529,60 @@
     opacity: 0.8;
   }
 }
+
+/* ════════════════════════════════════════════
+   LEGAL PAGES (Privacy / Terms of Service)
+   ════════════════════════════════════════════ */
+[data-theme="light"] {
+  .legal-banner {
+    background-color: var(--bg-primary);
+  }
+
+  .legal-banner .sbr-1 {
+    background: #aeb5ff;
+    animation: sbrFloat1 20s ease-in-out infinite;
+  }
+
+  .legal-banner .sbr-2 {
+    background: #fff;
+    animation: sbrFloat2 20s ease-in-out infinite;
+  }
+
+  .legal-banner .sbr-3 {
+    background: #b5c2ff;
+    animation: sbrFloat3 20s ease-in-out infinite;
+  }
+
+  .legal-banner .sbr-4 {
+    background: #fff;
+    animation: sbrFloat4 20s ease-in-out infinite;
+  }
+
+  .legal-banner .sbr-5 {
+    background: #ff9eed;
+    animation: sbrFloat5 20s ease-in-out infinite;
+  }
+
+  .legal-banner-heading {
+    background: linear-gradient(188deg, #75009f 15.81%, #2b013b 110.44%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .legal-banner-meta {
+    color: #4c4c4c;
+  }
+
+  .legal-section-title-accent {
+    background: linear-gradient(90deg, #8c04be 0%, #0f7aa6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .legal-section-text a,
+  .legal-section-list a {
+    color: #8c04be;
+  }
+}

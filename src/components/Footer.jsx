@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 
 const NAV_LINKS = [
   { label: "Approach", href: "/approach" },
@@ -309,14 +310,14 @@ function Footer() {
         {/* ── Nav links ── */}
         <nav className="new-footer-nav" aria-label="Footer navigation">
           {NAV_LINKS.map((l) => (
-            <a
+            <NavLink
               key={l.label}
-              href={l.href}
+              to={l.href}
               className="new-footer-nav-link"
               aria-label={`Navigate to ${l.label}`}
             >
               {l.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
